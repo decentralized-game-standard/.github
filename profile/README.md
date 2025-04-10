@@ -51,6 +51,10 @@ This needs you:
 
 No rush—it’s a foundation. Join when it clicks.
 
+## Frequently Asked Questions
+
+Check out the [FAQ](FAQ.md) to see if your question's been asked before.
+
 ## License
 
-[MIT License](LICENSE)—take it, tweak it, keep it free.
+[MIT License](../LICENSE)—take it, tweak it, keep it free.
