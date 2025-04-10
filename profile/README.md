@@ -40,7 +40,7 @@ Games that last 1,000 years—stories cheaper to tell, worlds that don’t vanis
 
 ## Future Glimmers
 
-This is conceptual—seeds, not software. Tomorrow? Peer-to-peer servers, player IDs that stick, stories anyone can remix. It’s up to us to deem it important and make it real.
+This is conceptual—seeds, grounded in a legitimate software stack. Tomorrow? Peer-to-peer servers, player IDs that stick, stories anyone can remix. It’s up to us to deem it important and make it real.
 
 ## Shape It
 
