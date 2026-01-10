@@ -38,7 +38,19 @@ It doesn't sound hype because there's no hype. All utility, no ponzi-scheme. The
 
 Games that last 1,000 years—stories cheaper to tell, worlds that don’t vanish. This doesn’t kill AAA or favor indie. It’s a standard that lets big budgets shine and small dreams soar, free of unscrupulous one-sided chokeholds. A kid trades a 2025 digital card in 3025. A solo-dev crafts their soul into a game and can stand toe to toe with the giants. That’s the point.
 
-## Future Glimmers
+## The Three Pillars
+
+This vision rests on three open standards, each tackling a piece of the puzzle:
+
+| Pillar | What It Does | Link |
+|--------|--------------|------|
+| **AEMS** | Standardizes game entity data (items, characters, worlds) so they can exist outside any single game | [AEMS Standard](../../aems-standard/README.md) |
+| **Forge-Engine** | A modular approach to building game engines from small, composable processors | [Forge-Engine](../../forge-engine/README.md) |
+| **Stream Protocol** | Incentivizes contributions (code, content, hosting) via decentralized micro-payments | [Stream Protocol](../../stream-layer/README.md) |
+
+They work together: AEMS defines *what* exists, Forge-Engine runs *how* it works, Stream Protocol ensures *everyone gets paid fairly*.
+
+## Glimmers Ahead
 
 This is conceptual—seeds, grounded in a legitimate software stack. Tomorrow? Peer-to-peer servers, player IDs that stick, stories anyone can remix. It’s up to us to deem it important and make it real.
 

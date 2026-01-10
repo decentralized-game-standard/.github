@@ -156,7 +156,15 @@ An initial prototype demonstrating:
 - Two games sharing an AEMS-defined asset.  
 - A Stream Protocol transaction rewarding a contributor.  
 - A Forge-Engine module powering a basic game feature.  
-This is years away, marking the shift from theory to proof-of-concept.
+This will mark the shift from theory to proof-of-concept.
+
+**What's the simplest thing I can build today?**  
+Each standard has a "Tier 1" action you can do right now, no code required:
+- **AEMS**: Post a Nostr note with `{ "name": "Iron Sword", "type": "item" }`—you've created a decentralized entity.
+- **Stream Protocol**: Post a `kind:42069` Nostr event with `["event_type", "request"]` tags—you've signaled work available.
+- **Forge-Engine**: Sketch a network on paper—one input processor, one logic processor, one output.
+
+See each standard's README for deeper "Tier 2" and "Tier 3" prototype paths.
 
 **How will progress be evaluated?**  
 Progress will be measured over decades by:  
