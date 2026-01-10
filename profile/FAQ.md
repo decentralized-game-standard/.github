@@ -3,182 +3,142 @@
 ### General Questions
 
 **What is the Decentralized Game Standard?**  
-The Decentralized Game Standard is a framework under development to transform video games into open, decentralized protocols, akin to enduring physical games like chess or Senet. Leveraging technologies such as Nostr for data storage, Liquid for asset ownership, and Lightning for payments, it aims to enable game interoperability, player ownership, and longevity beyond corporate lifespans. Protocols are currently being defined, with research and development in early stages.
+Three interlocking protocols—AEMS, GERS, and WOSS—that enable games to exist outside corporate servers. Built on Nostr for decentralized data and Lightning for instant settlement. The goal: games that last centuries, players who truly own their assets, and creators who build on shared foundations.
 
-**Why is this initiative significant?**  
-Contemporary video games are ephemeral—dependent on centralized servers that, when decommissioned, erase player progress and entire worlds. Developers face redundant work and platform constraints. This standard seeks to establish a future where games persist for centuries, players retain their assets indefinitely, and creators operate with greater autonomy, preserving the industry’s creative and communal value over generations.
+**Why should I care?**  
+Digital games are fragile. When servers shut down, worlds vanish, progress evaporates, and assets become worthless. This standard addresses that structural problem—not by fighting the industry, but by defining open protocols anyone can build on.
 
-**Is this available for immediate implementation?**  
-No, this is a long-term endeavor with a horizon spanning a decade or more. It is not a ready solution but a vision taking shape through ongoing protocol design and prototype exploration. It targets those committed to a sustainable gaming future, not immediate deployment.
+**Is this ready to use?**  
+No. These are conceptual standards (Version 0.2, January 2026). No reference implementations exist. Each standard includes prototype paths for hands-on exploration. This is a decade-long effort, not a product launch.
 
 ---
 
 ### For Developers
 
-**How might this benefit developers in the future?**  
-Over time, the standard could offer:  
-- Reusable game entities (e.g., items, characters) via AEMS, reducing repetitive development efforts.  
-- A decentralized incentive system through Stream Protocol, enabling payments in satoshis for contributions.  
-- Modular engine construction with Forge-Engine, tailored to specific project needs.  
-- Independence from platform intermediaries.  
-These concepts are in R&D—no functional code exists yet, but the groundwork is being laid.
+**What benefits could developers see?**  
+Over time:
+- Reusable entities via AEMS—define once, interpret across games
+- Modular engine composition via GERS—swap processors without rewrites
+- Direct compensation via WOSS—earn sats for contributions without platform fees
 
-**What is the current state of the technology?**  
-The technologies are nascent and imperfect. Nostr’s relay network exhibits inconsistent reliability, Liquid’s federation is limited in scope, and Lightning faces occasional routing inefficiencies. Research is addressing these through caching, redundancy, and optimization strategies, but they remain experimental, not production-grade.
+**What's the current state of the technology?**  
+Nostr relay networks vary in reliability. Lightning routing has improved but isn't perfect. These are real trade-offs. The standards work within current limitations while anticipating improvements.
 
-**How can developers engage at this stage?**  
-Participation is conceptual for now:  
-- Review emerging AEMS schemas (e.g., `{ "name": "Mana Crystal", "type": "item" }`).  
-- Contribute ideas for Stream Protocol’s reward structures.  
-- Explore Forge-Engine’s theoretical modularity.  
-Engage in discussions via forums or repositories to influence the protocols as they evolve.
+**How can developers engage now?**  
+- Review the protocol specs in each standard's README
+- Try the Tier 1 prototype paths (no code required)
+- Open issues with questions or ideas
+- Build minimal implementations
 
-**Will this integrate with existing development tools?**  
-Integration with tools like Unity or Godot is a future objective. Currently, no implementations exist, but the intention is to develop compatible SDKs as the standard matures over years.
+**Will this integrate with Unity, Unreal, Godot?**  
+Future goal. GERS is designed to be engine-agnostic—existing engines could implement the Record/Processor pattern. No SDKs exist yet.
 
 ---
 
 ### For Studios
 
-**What potential advantages could studios gain?**  
-In the long term, studios might:  
-- Reduce costs by leveraging shared assets or a decentralized contributor network.  
-- Generate revenue through player-driven economies or perpetually playable games.  
-- Adapt to various monetization models (e.g., subscriptions, one-time purchases).  
-- Create titles resilient to market shifts.  
-These are under exploration through prototypes, not yet actionable.
+**What could studios gain?**  
+- Reduced redundancy by building on shared entity definitions
+- Revenue from player-driven economies that outlive individual titles
+- Flexibility in monetization without platform constraints
+- Games that don't die when you stop maintaining them
 
-**Is scalability achievable with this approach?**  
-Scalability remains untested at scale. Decentralized systems currently exhibit higher latency than centralized alternatives, but research into data pre-fetching, payment batching, and practical testing aims to address this. It is better suited to smaller-scale or turn-based projects initially, with broader potential emerging later.
+**Is this scalable?**  
+Untested at scale. Decentralized systems currently trade some latency for censorship resistance. Better suited to turn-based, async, or smaller-scale projects initially. Performance research is ongoing.
 
-**How can fragmentation be prevented?**  
-A unified core schema for game entities is being established, with plans for community-driven governance to manage evolution. This is an ongoing effort to ensure consistency as the standard develops.
+**How do we prevent fragmentation?**  
+AEMS defines a core schema structure. The Entity → Manifestation → State → Asset model ensures games can interpret shared entities differently without breaking the underlying standard.
 
-**How can studios participate without full commitment?**  
-Studios can observe and influence:  
-- Monitor R&D outputs, such as prototype schemas or reward mechanisms, as they emerge.  
-- Provide input on studio-specific requirements to shape future iterations.  
-- No operational adoption is expected at this preliminary phase.
+**Can we participate without full commitment?**  
+Yes. Monitor development, provide input on requirements, or build internal proofs-of-concept. No production adoption is expected at this stage.
 
 ---
 
 ### For Gamers
 
-**What long-term benefits might gamers see?**  
-In a realized future, gamers could:  
-- Own in-game assets via Liquid, independent of server shutdowns.  
-- Access games that persist beyond studio closures.  
-- Earn satoshis for contributions like modding or hosting via Stream Protocol.  
-- Retain control over their gaming legacy.  
-These are goals under investigation, not current realities.
+**What long-term benefits might I see?**  
+- Own your in-game assets via cryptographic keys—no server required
+- Games that persist beyond studio closures
+- Earn sats for contributions like modding, hosting, or testing via WOSS
+- A portable identity (your Nostr keypair) across games
 
-**Could gameplay quality be affected initially?**  
-Early implementations may experience performance trade-offs, such as latency from decentralized networks. Efforts to mitigate this include data caching and optimization, with a focus on ensuring playability improves over time as the technology matures.
+**Could this affect gameplay quality?**  
+Early implementations may have performance trade-offs. Decentralized data fetching adds latency compared to centralized servers. Caching and optimization strategies are being explored.
 
-**How can gamers contribute to this vision?**  
-Gamers can participate gradually:  
-- Test prototypes when available and provide feedback.  
-- Engage in community discussions to guide development.  
-- Offer ideas or insights for those with technical inclinations.  
-This is a collaborative process unfolding over years.
+**How can gamers contribute?**  
+- Test prototypes when available
+- Join discussions and offer feedback
+- Share your perspective on what matters in game longevity
 
 ---
 
-### Technical Challenges
+### Technical Questions
 
-**What are the plans to address network reliability concerns?**  
-Nostr’s relay instability and Liquid’s limited federation pose risks to data and asset availability. Proposed strategies include deploying multiple relays, implementing local data redundancy, and relying on Liquid’s Bitcoin-backed security. These are being researched to ensure robustness over time.
+**How does identity work?**  
+Your Nostr keypair is your identity. No separate identity protocol is needed—Nostr profiles already provide usernames, avatars, and social graphs. Games interpret the same pubkey as the player.
 
-**How will performance limitations be managed?**  
-Decentralized systems may introduce latency. Current R&D focuses on:  
-- Pre-loading data to minimize delays.  
-- Batching Lightning transactions for efficiency.  
-- Conducting iterative tests to refine performance.  
-The emphasis is on gradual improvement for diverse game types.
+**How does multiplayer coordination work?**  
+WOSS can coordinate any offer-response pattern, including matchmaking and lobby formation. Third-party services build game-specific implementations on top, but the protocol provides the coordination language.
 
-**How will economic incentives remain viable amidst Bitcoin volatility?**  
-Bitcoin’s price fluctuations could impact Stream Protocol rewards. Exploration includes:  
-- Dynamic pricing adjustments based on market conditions.  
-- Potential integration of stablecoin alternatives in the future.  
-This remains an open question being addressed methodically.
+**What about cheating and verification?**  
+WOSS enables verification services—third parties can attest to gameplay sessions, achievement legitimacy, or entity provenance. The protocol doesn't enforce verification; it enables markets for trust.
 
-**How will the standard maintain coherence and avoid fragmentation?**  
-A foundational schema (e.g., `{ "id": "hash", "name": "string" }`) is being crafted, with extensible edges and a governance model planned for community oversight. This is an active area of development to ensure unity.
+**What about mods and extensions?**  
+GERS Processors are inherently modular. Third-party processors can be distributed and compensated via WOSS. No separate mod protocol is needed—the existing standards handle it.
 
-**What measures are in place for security vulnerabilities?**  
-Risks such as Nostr spam, Liquid key theft, and Forge-Engine module exploits are acknowledged. Approaches under consideration include:  
-- Authentication for Nostr events.  
-- Secure key management practices for Liquid.  
-- Future audits of modular components.  
-Security is a priority evolving with the standard.
+**How do the three standards connect?**  
+1. **AEMS** defines entities (the *what*)
+2. **GERS** runs processors that read/write entity state (the *how*)
+3. **WOSS** compensates creators and contributors (the *why*)
+
+A level designer creates an AEMS entity, a GERS processor renders it, and WOSS ensures the designer gets paid when someone uses it.
 
 ---
 
 ### Long-term Vision
 
-**What is the goal over the next decade or more?**  
-The objective is an ecosystem where:  
-- Game assets function as interoperable components across titles.  
-- Players can trade or retain items indefinitely.  
-- Developers build upon a shared, open foundation.  
-- Games endure for centuries, not mere product cycles.  
-This is a deliberate, incremental pursuit.
+**What's the 10+ year goal?**  
+An ecosystem where:
+- Game assets function as interoperable concepts across titles
+- Players retain items and progress indefinitely
+- Developers build on shared, open foundations
+- Games can run for centuries—maintained by communities, not corporations
 
-**How might this reshape the gaming industry?**  
-It aims to redistribute influence:  
-- Empowering creators and players over platforms.  
-- Prioritizing enduring value over transient profits.  
-- Connecting siloed ecosystems into a broader network.  
-It complements, rather than competes with, existing models.
-
-**What if major studios do not adopt it?**  
-Adoption may begin with independent developers, demonstrating viability through innovative projects. Larger studios could follow as player demand and economic incentives align, driven by grassroots momentum over time.
+**What if major studios don't adopt this?**  
+Adoption will likely start with independent developers demonstrating viability. Studios may follow as player demand and economic incentives align. Or they may not—open protocols don't require permission.
 
 **How will decentralization be sustained?**  
-Sustainability hinges on:  
-- An initial core team transitioning to community governance, potentially a council or decentralized structure.  
-- Transparent protocol evolution with defined processes.  
-This balance is being refined as the initiative progresses.
+Open protocols don't need ongoing maintenance once solidified. Like TCP/IP or HTTP, the standards themselves are stable; implementations evolve. Governance will shift from initial contributors to the implementing community.
 
 ---
 
 ### Practical Steps
 
-**How can individuals contribute at this stage?**  
-Contributions align with roles:  
-- **Developers**: Participate in protocol design, explore early concepts, and provide feedback.  
-- **Studios**: Offer strategic insights to guide R&D toward practical outcomes.  
-- **Gamers**: Engage in discussions, test prototypes when developed, and share perspectives.  
-No functional code exists yet—engagement is intellectual and visionary.
+**What's the simplest thing I can do today?**
 
-**What constitutes the first significant milestone?**  
-An initial prototype demonstrating:  
-- Two games sharing an AEMS-defined asset.  
-- A Stream Protocol transaction rewarding a contributor.  
-- A Forge-Engine module powering a basic game feature.  
-This will mark the shift from theory to proof-of-concept.
+Each standard has a Tier 1 action requiring no code:
 
-**What's the simplest thing I can build today?**  
-Each standard has a "Tier 1" action you can do right now, no code required:
-- **AEMS**: Post a Nostr note with `{ "name": "Iron Sword", "type": "item" }`—you've created a decentralized entity.
-- **Stream Protocol**: Post a `kind:42069` Nostr event with `["event_type", "request"]` tags—you've signaled work available.
-- **Forge-Engine**: Sketch a network on paper—one input processor, one logic processor, one output.
+- **AEMS**: Post a Nostr note with `{ "name": "Iron Sword", "type": "item" }`—you've created a decentralized entity
+- **WOSS**: Post a `kind:32001` event with `["sats", "100"]`—you've broadcast a work offer
+- **GERS**: Sketch a network on paper—boxes (processors) connected by arrows (data flow)
 
-See each standard's README for deeper "Tier 2" and "Tier 3" prototype paths.
+See each standard's README for deeper prototype paths.
 
-**How will progress be evaluated?**  
-Progress will be measured over decades by:  
-- Number of games incorporating the standard.  
-- Instances of assets bridging titles.  
-- Volume of equitable rewards distributed.  
-Success is gauged by steady, meaningful adoption.
+**What constitutes the first milestone?**
+
+A proof-of-concept demonstrating:
+- Two games sharing an AEMS-defined entity
+- A WOSS transaction compensating a contributor
+- A GERS processor powering a basic game feature
+
+This marks the shift from theory to prototype.
 
 ---
 
 ### Final Thoughts
 
-**Why should this matter to stakeholders now?**  
-The gaming industry risks losing its cultural and creative capital to short-lived, platform-bound models. This standard offers a path to games that endure like physical classics—open, resilient, and community-driven. It is an investment in a future where gaming thrives for centuries.
+**Why should this matter now?**  
+The gaming industry loses cultural capital to short-lived, platform-bound models. This standard offers a path to games that endure—open, resilient, community-owned. It's an investment in a future where gaming thrives for centuries.
 
-**What happens if this effort falters?**  
-Should it falter, it still serves a purpose—planting ideas that may inspire alternative solutions or shift industry perspectives. The greater risk lies in inaction, perpetuating a status quo where games remain transient. This initiative is a calculated step toward a legacy worth pursuing.
+**What if this effort fails?**  
+Even failure plants seeds. The ideas may inspire alternatives or shift industry perspectives. The greater risk is inaction—perpetuating systems where games die with their servers. This is a calculated step toward something better.
