@@ -1,77 +1,108 @@
 # Decentralized Game Standard
 
-**Protocols for Games That Endure Beyond Their Makers — Conceptual Framework, Version 0.2 — January 2026**
+**Protocols for Games That Endure as Open Rulesets, Not Fragile Products — Conceptual Framework, Version 0.2 — January 2026**
 
-Games are among humanity's oldest cultural artifacts. Chess, go, mancala—played across centuries with the same core components, adapted endlessly by players who never sought permission. The pieces and board exist independently; rules are conventions interpreted anew by each generation. No single authority can revoke access, shut down the "servers," or demand a cut of every match.
+Physical games have endured for centuries because they are fundamentally open rulesets played with neutral artifacts. Anyone can grab a ball and play soccer in a park—no permission needed from FIFA. Variants emerge freely: pickup games, backyard rules, niche leagues. Professional spectacles (World Cup, Premier League) add polish and scale as voluntary overlays, but they never own the game itself. Equipment makers, coaches, and local organizers build thriving ecosystems around the open core without gatekeeping play.
 
-Digital games have followed a different path. They are built as walled, server-dependent systems where publishers control the environment, the assets, and the flow of value. This architecture has produced extraordinary experiences but also systemic fragility: games die prematurely, communities lose their history, creators capture little of the value they generate, and innovation is bottlenecked through gatekeepers.
+Digital games have taken the opposite path: built as proprietary products controlled by publishers who own the "ball," the rules, the field, and the scoreboard. This creates extraordinary short-term experiences but systemic fragility—games shut down, assets vanish, communities fracture, and innovation bottlenecks through gatekeepers.
 
-The Decentralized Game Standard is a set of minimal, interlocking protocols designed to realign digital play with its analog roots. By separating durable entities from interpretive rules, composing engines from swappable parts, and enabling direct coordination settled in sats, it aims to create games that can outlive companies, engines, and technological shifts.
+The Decentralized Game Standard realigns digital play with its physical roots. It treats genres as eternal, open rulesets rather than disposable products. Persistent artifacts (items, characters) exist independently on Nostr. Composable engines interpret rules flexibly. Coordination flows peer-to-peer with instant settlement. The result: casual "pickup" games happen spontaneously, niche variants thrive without needing mass scale, and ambitious "pro league" experiences can emerge as voluntary services on top—competed against, forked, or ignored if they overreach.
 
-## Structural Failures in the Current Model
+This is not utopian purity demanding everything be fully decentralized. It is pragmatic freedom: a neutral, permissionless foundation that enables abundant play, with optional centralized layers for convenience and spectacle.
 
-The evidence is extensive and ongoing.
+## The Product Paradigm and Its Failings
 
-- **Preservation Crisis** — Online titles routinely vanish. Concussion (2022) shut down in 2023 after limited success. Knockout City (2021) ended official support in 2023, though a community version later emerged. The Crew (2014) was delisted and made unplayable in 2024 when Ubisoft revoked licenses. These are not outliers: hundreds of live-service games—Friday the 13th, Paragon, Battleborn—have followed the same trajectory, erasing player progress and purchased content.
+Digital games became products because abundance was channeled into artificial scarcity. Publishers control servers, asset validity, matchmaking, and monetization—making every experience contingent on their continued interest.
 
-- **Interoperability Absence** — Assets remain trapped. A Fortnite skin cannot travel to Roblox or another battle royale without corporate partnership (rare and selective). Engine lock-in compounds this: a Unity project rarely ports cleanly to Unreal, stifling experimentation.
+Real-world evidence shows the cost:
 
-- **Modding Precarity** — Mods sustain titles far beyond official support. Skyrim (2011) thrives in 2026 primarily through community content. Yet monetization attempts repeatedly fail under centralized models: Steam's 2015 paid mods backlash, Bethesda's Creation Club criticism for high prices and curation limits. Modders bear legal risk and receive inconsistent compensation.
+- **Preservation Crisis** — Live-service titles vanish routinely (The Crew delisted in 2024, Knockout City ended 2023, hundreds of others). Player progress and purchases evaporate.
+- **Locked Assets** — Items rarely travel between games without corporate deals. Engine lock-in traps entire projects.
+- **Modding and Community Fragility** — Mods sustain classics like Skyrim, yet monetization efforts repeatedly fail under centralized curation and high rents.
+- **Gatekept Coordination** — Esports scenes die unilaterally. Server hosting relies on unreliable donations. Discovery algorithms bury most creations while extracting 30%+.
 
-- **Competitive Control** — Publishers can terminate esports ecosystems unilaterally. Heroes of the Storm's scene ended abruptly in 2018. Overwatch League scaled back dramatically. Tournament organizers face IP enforcement threats even when adding value.
+These stem from forced centralization at the foundation. The alternative is not anarchy—it's an open base layer with voluntary centralization where useful.
 
-- **Discovery and Value Capture** — Platforms extract 30% (or more) for distribution while algorithms bury most releases. Indie developers and community creators compete in opaque systems.
+## Core Premise: Genres as Sports, Not Products
 
-These issues stem from centralized architecture: single points of control, failure, and rent extraction.
+A battle royale should feel like soccer: core concepts (shrinking zone, looting, last-player-standing) are neutral and persistent. Anyone can host a quick match with friends or strangers. Items earned in one session carry forward. Niche variants (zombie mode, prop hunt) emerge without approval. Massive, polished tournaments with ranked ladders and streaming can exist as opt-in services—funded directly, competed against freely.
 
-## Core Premise: Decouple the Token from the Ruleset
-
-A digital sword should exist as a persistent, neutral concept—definable once, interpretable variously—carrying its history across games and engines. Engines should compose from explicit, replaceable components. Coordination—funding servers, commissioning assets, running tournaments—should flow peer-to-peer with instant settlement.
-
-Three protocols achieve this on existing open infrastructure:
+The standard achieves this by separating durable artifacts from interpretive rules and enabling frictionless coordination:
 
 | Protocol | Core Mechanism | Primary Failures Addressed |
 |----------|----------------|---------------------------|
-| **AEMS** | Nostr events defining universal Entities, game-specific Manifestations, mutable State, and optional ownership chains | Preservation, Interoperability |
-| **GERS** | Data-flow engine architecture with uniform Records and stateless Processors | Modding fragility, Engine lock-in, Long-term maintenance |
-| **WOSS** | Three-event coordination language settled via Lightning | Value capture, Competitive control, Discovery gatekeeping |
+| **AEMS** | Nostr events defining universal Entities, game-specific Manifestations, mutable State, and optional ownership | Preservation, asset lock-in, interoperability |
+| **GERS** | Data-flow engine architecture with uniform Records and stateless Processors | Engine rigidity, mod fragility, long-term maintenance |
+| **WOSS** | Three-event coordination language settled via Lightning | Gatekept value flow, centralized coordination, discovery rents |
+
+Built on mature primitives—Nostr for resilient data, Lightning for instant micropayments—no blockchains, tokens, or new consensus layers.
+
+## How It Works in Practice
+
+Imagine "MOBA" as a genre like basketball:
+
+- A community defines universal Entities (heroes, items, creeps) via AEMS.
+- Different groups publish Manifestations: "classic Dota-style," "fast-paced beginner variant," "underwater twist."
+- Players own instances with history and state that persist on Nostr.
+
+Casual play: Someone posts a WOSS offer—"500 sats buy-in for a quick MOBA lobby tonight, classic rules." Others join via any GERS-compatible client. A community-hosted server (or P2P mesh) runs the match. Items import automatically. No accounts, no platform—just play.
+
+Niche play: A small group runs their weird variant weekly. It stays cult forever, like church-league softball.
+
+Pro-layer play: A popular organizer bounties high-uptime servers, anti-cheat Processors, and ranked matchmaking via recurring WOSS offers. Thousands opt in for polished experience and streamed tournaments. Third-party clients emerge with slick UI, discovery feeds, or premium overlays. If the organizer gets extractive, players fork the ruleset or drop to raw pickup lobbies—the foundation guarantees exit.
+
+Value flows horizontally: modders earn directly for new Manifestations, artists for assets, hosts for reliability, streamers for casting. Ecosystems grow around the open ruleset (client apps, analytics tools, "equipment" like custom renderers) without anyone owning the game itself.
+
+Single-player adventures (Zelda-likes) fit too: worlds as shared Entity collections, mods as new Manifestations/Processors, persistence beyond any one engine.
+
+## The Protocols
 
 ### AEMS: Durable Entities
+Layered Nostr events make artifacts independent and interpretable.
+- Universal Entity (e.g., "sword that deals damage").
+- Game-specific Manifestation (e.g., +50 attack, fire enchantment).
+- Mutable State (durability, upgrades).
+- Optional signed ownership chain.
 
-AEMS structures game objects as layered Nostr events. A "health potion" is defined universally (Entity), interpreted per game (Manifestation), tracks instance changes (State), and optionally proves ownership through signed transfers (Asset). No blockchain required—Nostr's relay replication and cryptographic signing provide persistence and verifiability suited to social agreement, not financial double-spend prevention.
+Items earned in one game persist for import elsewhere.
 
 ### GERS: Composable Engines
+Data-oriented design: everything is Records with Fields, transformed by stateless Processors wired into Networks.
+- Swap renderers, physics, or input without rewriting core.
+- Mods are native Processor additions.
+- Naturally supports parallelism and explicit data flow.
 
-GERS applies data-oriented design: everything is a Record with Fields, transformed by small Processors wired into Networks. Renderers, physics, input—all swappable without systemic rewrite. Mods become native extensions. Obsolescence in one layer (e.g., a graphics API) affects only one component.
+Engines import AEMS Entities as Records and apply selected Manifestations.
 
 ### WOSS: Permissionless Coordination
+Three Nostr events (Offer, Fulfill, Ack) settled via Lightning.
+- Fund servers, bounty assets, pay modders, pool tournament prizes.
+- Direct, instant, no rake.
 
-WOSS enables direct offers, fulfillments, and acknowledgments on Nostr, settled instantly via Lightning. Communities fund servers, modders earn directly, tournament pools form spontaneously—all without platform rents or approval.
-
-## How the Protocols Interlock
-
-A player discovers a rare artifact:
-- Defined as an AEMS Entity by a community curator.
-- Manifested differently by each GERS-based game engine.
-- State updated through gameplay via Record Fields.
-- A modder, funded via WOSS, adds a new Processor enhancing its visuals.
-- Ownership transfers via AEMS when traded.
-- If one game ends, the artifact persists on Nostr for another engine to import.
-
-Value flows horizontally: creators, hosts, players coordinate directly.
+Communities coordinate at any scale without gatekeepers.
 
 ## Technical Foundation
 
-- **Nostr** — Signed, relay-replicated events for all persistent data (entities, state, offers).
-- **Lightning** — Instant, low-cost settlement for coordination.
-- No tokens, no consensus chains, no speculative assets.
+- **Nostr** — Signed, relay-replicated events for all persistent data.
+- **Lightning** — Near-zero-fee settlement for commitments.
+- Minimal by design: no speculative assets, no consensus overhead.
+
+## Example Emergence
+
+A player discovers a rare shield:
+- Defined universally via AEMS Entity.
+- Manifested differently across games.
+- State tracks battle history.
+- A modder (funded via WOSS) adds visual flair Processor.
+- Ownership transfers permissionlessly.
+- One hosted game ends—the shield lives on for the next pickup match or pro tournament.
 
 ## Status and Scope
 
-These are conceptual specifications—minimal by design, inviting implementation and evolution. No reference engines or marketplaces exist yet. Each protocol includes incremental prototype steps from single Nostr events to small systems.
+These are conceptual specifications—minimal, open, and language-agnostic—inviting experimentation. No reference implementations yet exist. The focus is the hardest problems: preservation, permissionless play, and open ecosystems. Massive synchronous experiences may always involve voluntary centralized layers; the standard guarantees they remain optional.
 
-This is not a product or company. It is an open invitation to build games that compound cultural value across decades rather than resetting with corporate cycles.
+This is an invitation to build games that compound cultural value across decades, like chess or soccer, rather than resetting with corporate cycles.
 
-Experiment. Critique. Extend.
+Experiment. Host a pickup game. Define an Entity. Watch ecosystems emerge.
 
 **MIT License** — Free to implement, adapt, share.
