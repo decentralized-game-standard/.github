@@ -10,6 +10,12 @@ The Decentralized Game Standard realigns digital play with its physical roots. I
 
 This is not utopian purity demanding everything be fully decentralized. It is pragmatic freedom: a neutral, permissionless foundation that enables abundant play, with optional centralized layers for convenience and spectacle.
 
+---
+
+📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[GERS](https://github.com/decentralized-game-standard/gers-standard)** · ⚡ **[WOSS](https://github.com/decentralized-game-standard/woss-standard)** · 📜 **[Ludic Structures](https://github.com/decentralized-game-standard/ludic-standard)** · ❓ **[FAQ](https://github.com/decentralized-game-standard/.github/blob/main/profile/FAQ.md)**
+
+---
+
 ## The Product Paradigm and Its Failings
 
 Digital games became products because abundance was channeled into artificial scarcity. Publishers control servers, asset validity, matchmaking, and monetization—making every experience contingent on their continued interest.
