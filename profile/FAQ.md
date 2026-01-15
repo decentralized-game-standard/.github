@@ -3,13 +3,13 @@
 ## Overview
 
 **What is the Decentralized Game Standard?**  
-A set of three minimal, interlocking protocols—AEMS, GERS, and WOSS—designed to make digital games more resilient, interoperable, and community-driven. Built entirely on existing open infrastructure (Nostr for persistent data and Lightning for settlement), they separate durable game objects from interpretive rules, enable modular engine construction, and facilitate direct peer-to-peer coordination. The aim is to create games that can persist for generations, much like chess or go, without depending on any single company or server.
+A set of three minimal, interlocking protocols—AEMS (Asset-Entity-Manifestation-State), GERS (Game Engine Record Standard), and WOSS (Work-Offer Settlement Standard)—designed to make digital games more resilient, interoperable, and community-driven. Built entirely on existing open infrastructure (Nostr for persistent data and Lightning for settlement), they separate durable game objects from interpretive rules, enable modular engine construction, and facilitate direct peer-to-peer coordination. The aim is to create games that can persist for generations, much like chess or go, without depending on any single company or server.
 
 **Why does this matter?**  
 Most digital games are architecturally fragile: they rely on centralized servers that can be switched off, revocable licenses that can be taken away, and proprietary engines that lock in assets and progress. The result is cultural loss—entire worlds, inventories, and communities disappear when support ends. This standard proposes an alternative path where players retain meaningful control, creators earn directly, and games can evolve indefinitely through open contribution.
 
 **Is this production-ready?**  
-Not yet. These are conceptual specifications (Version 0.2, January 2026) with no reference implementations. The focus is on clear, minimal protocols that anyone can experiment with today. Each includes incremental prototype steps starting from single Nostr events. This is a long-term architectural proposal, not a finished product.
+Not yet. These are conceptual specifications (2026-01-14) with no reference implementations. The focus is on clear, minimal protocols that anyone can experiment with today. Each includes incremental prototype steps starting from single Nostr events. This is a long-term architectural proposal, not a finished product.
 
 ## For Players
 
@@ -43,8 +43,8 @@ Nostr relay availability varies; some events may require multiple relays for rel
 
 **How do I start building?**  
 Each protocol includes a stepped prototype path:
-- Tier 1: No-code actions (post events, sketch networks)
-- Tier 2–4: Gradually add reading, writing, and scheduling logic
+- Step 1: No-code actions (post events, sketch networks)
+- Steps 2–5: Gradually add reading, writing, and scheduling logic
 Review the individual READMEs and experiment freely.
 
 ## For Studios and Larger Teams
@@ -80,7 +80,7 @@ GERS treats mods as additional Processors that slot into the network. Distributi
 
 **How do the protocols connect in practice?**  
 - AEMS provides the persistent "what" (entities and state)
-- GERS provides the runtime "how" (processors transforming records)
+- GERS provides the runtime "how" (Processors transforming Records)
 - WOSS provides the economic "why" (incentives for creation and maintenance)
 
 Example flow: A community defines an AEMS sword → multiple games manifest it differently in their GERS engines → a modder adds a new visual Processor and gets paid via WOSS → ownership transfers remain valid across all implementations.

@@ -1,6 +1,6 @@
 # Decentralized Game Standard
 
-**Protocols for Games That Endure as Open Rulesets, Not Fragile Products — Conceptual Framework, Version 0.2 — January 2026**
+**Protocols for Games That Endure as Open Rulesets, Not Fragile Products — Conceptual Framework, 2026-01-14**
 
 Physical games have endured for centuries because they are fundamentally open rulesets played with neutral artifacts. Anyone can grab a ball and play soccer in a park—no permission needed from FIFA. Variants emerge freely: pickup games, backyard rules, niche leagues. Professional spectacles (World Cup, Premier League) add polish and scale as voluntary overlays, but they never own the game itself. Equipment makers, coaches, and local organizers build thriving ecosystems around the open core without gatekeeping play.
 
@@ -31,9 +31,9 @@ The standard achieves this by separating durable artifacts from interpretive rul
 
 | Protocol | Core Mechanism | Primary Failures Addressed |
 |----------|----------------|---------------------------|
-| **AEMS** | Nostr events defining universal Entities, game-specific Manifestations, mutable State, and optional ownership | Preservation, asset lock-in, interoperability |
-| **GERS** | Data-flow engine architecture with uniform Records and stateless Processors | Engine rigidity, mod fragility, long-term maintenance |
-| **WOSS** | Three-event coordination language settled via Lightning | Gatekept value flow, centralized coordination, discovery rents |
+| **AEMS** (Asset-Entity-Manifestation-State) | Nostr events defining universal Entities, game-specific Manifestations, mutable State, and optional ownership | Preservation, asset lock-in, interoperability |
+| **GERS** (Game Engine Record Standard) | Data-flow engine architecture with uniform Records and stateless Processors | Engine rigidity, mod fragility, long-term maintenance |
+| **WOSS** (Work-Offer Settlement Standard) | Three-event coordination language settled via Lightning | Gatekept value flow, centralized coordination, discovery rents |
 
 Built on mature primitives—Nostr for resilient data, Lightning for instant micropayments—no blockchains, tokens, or new consensus layers.
 
@@ -54,6 +54,10 @@ Pro-layer play: A popular organizer bounties high-uptime servers, anti-cheat Pro
 Value flows horizontally: modders earn directly for new Manifestations, artists for assets, hosts for reliability, streamers for casting. Ecosystems grow around the open ruleset (client apps, analytics tools, "equipment" like custom renderers) without anyone owning the game itself.
 
 Single-player adventures (Zelda-likes) fit too: worlds as shared Entity collections, mods as new Manifestations/Processors, persistence beyond any one engine.
+
+## Scope: Systemic Depth and Authored Vision
+
+This standard optimizes for games that benefit from longevity and community evolution—like sports or folklore genres. Yet it equally serves bounded, singular experiences (narrative adventures, puzzle stories, artistic experiments) by providing a neutral, durable substrate that creators can use privately. Mechanics can be refined on open foundations; stories, surprises, and IP remain fully under author control. The paradigm rejects artificial scarcity not to force sharing, but to ensure no game—open or closed—vanishes due to corporate whim or technical obsolescence.
 
 ## The Protocols
 
