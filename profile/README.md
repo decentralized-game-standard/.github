@@ -12,7 +12,7 @@ This is not utopian purity demanding everything be fully decentralized. It is pr
 
 ---
 
-📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[GERS](https://github.com/decentralized-game-standard/gers-standard)** · ⚡ **[WOSS](https://github.com/decentralized-game-standard/woss-standard)** · 📜 **[Ludic Structures](https://github.com/decentralized-game-standard/ludic-standard)** · ❓ **[FAQ](https://github.com/decentralized-game-standard/.github/blob/main/profile/FAQ.md)**
+📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[GERS](https://github.com/decentralized-game-standard/gers-standard)** · ⚡ **[WOSS](https://github.com/decentralized-game-standard/woss-standard)** · ✍️ **[APS](https://github.com/decentralized-game-standard/decentralized-game-protection)** · 📜 **[Ludic Structures](https://github.com/decentralized-game-standard/ludic-standard)** · ❓ **[FAQ](https://github.com/decentralized-game-standard/.github/blob/main/profile/FAQ.md)**
 
 ---
 
@@ -61,9 +61,19 @@ Value flows horizontally: modders earn directly for new Manifestations, artists 
 
 Single-player adventures (Zelda-likes) fit too: worlds as shared Entity collections, mods as new Manifestations/Processors, persistence beyond any one engine.
 
-## Scope: Systemic Depth and Authored Vision
+## Scope: Commons and Authored Experiences
 
-This standard optimizes for games that benefit from longevity and community evolution—like sports or folklore genres. Yet it equally serves bounded, singular experiences (narrative adventures, puzzle stories, artistic experiments) by providing a neutral, durable substrate that creators can use privately. Mechanics can be refined on open foundations; stories, surprises, and IP remain fully under author control. The paradigm rejects artificial scarcity not to force sharing, but to ensure no game—open or closed—vanishes due to corporate whim or technical obsolescence.
+This standard optimizes for games that benefit from longevity and community evolution—like sports or folklore genres. But what of puzzle games where the solution is the treasure? Mystery narratives where a single spoiler destroys the journey? Interactive art where the creator's intent *is* the experience?
+
+These authored experiences fit the same foundation through a philosophy of **abundance through reciprocity** rather than scarcity through enforcement:
+
+- **Unforgeable Attribution** — Every creative act is cryptographically signed. Origin is mathematically provable without courts or takedowns. Copying is fine; *claiming* (fraud about authorship) is impossible.
+- **Voluntary Covenants** — Authors attach use expectations as legible social signals ("attribution required," "commercial license needed"). Communities and reputation markets respect these—not through enforcement, but through transparency.
+- **First-Experience Economics** — Authored works monetize the *curated revelation* (paying for the puzzle-solving journey, not the solution itself). After encounter, content may open naturally.
+
+This rejects the false choice between "fully open commons" and "DRM-protected products." Authors retain attribution and can earn from first experiences. Copiers participate in cultural propagation. Neither requires enforcement mechanisms that contradict the open foundation.
+
+The Authorial Provenance Standard (APS) details this approach—provenance over property, covenants without enforcement, and markets for reputation and verification funded via WOSS.
 
 ## The Protocols
 

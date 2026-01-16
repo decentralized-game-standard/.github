@@ -1,6 +1,6 @@
 # Frequently Asked Questions: Decentralized Game Standard
 
-🏠 **[Overview](https://github.com/decentralized-game-standard)** · 📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[GERS](https://github.com/decentralized-game-standard/gers-standard)** · ⚡ **[WOSS](https://github.com/decentralized-game-standard/woss-standard)** · 📜 **[Ludic](https://github.com/decentralized-game-standard/ludic-standard)**
+🏠 **[Overview](https://github.com/decentralized-game-standard)** · 📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[GERS](https://github.com/decentralized-game-standard/gers-standard)** · ⚡ **[WOSS](https://github.com/decentralized-game-standard/woss-standard)** · ✍️ **[APS](https://github.com/decentralized-game-standard/decentralized-game-protection)** · 📜 **[Ludic](https://github.com/decentralized-game-standard/ludic-standard)**
 
 ---
 
@@ -88,6 +88,29 @@ GERS treats mods as additional Processors that slot into the network. Distributi
 - WOSS provides the economic "why" (incentives for creation and maintenance)
 
 Example flow: A community defines an AEMS sword → multiple games manifest it differently in their GERS engines → a modder adds a new visual Processor and gets paid via WOSS → ownership transfers remain valid across all implementations.
+
+## Authored Experiences and Provenance
+
+**Does this standard only work for "sports-like" games? What about puzzle games, mysteries, or narrative experiences?**  
+The core protocols (AEMS, GERS, WOSS) naturally serve commons-style games—those that benefit from open variation like folklore or sports. But authored experiences (puzzles, mysteries, artistic visions) fit the same foundation through the Authorial Provenance Standard (APS).
+
+**How can authored works exist in an open system without being "spoiled"?**  
+The key insight is that authored experiences monetize the *first encounter*, not eternal exclusivity. A puzzle game's value is in the journey of solving it—once solved, the solution naturally becomes known. APS enables:
+- **Sealed content markers** — Authors signal which elements are revelation-dependent
+- **First-experience payments** — Players pay (via WOSS) for the curated experience of proper revelation
+- **Post-encounter openness** — Content may open naturally after the experience, contributing to cultural commons
+
+This is like paying for a theater ticket: you pay for the experience of first revelation, not perpetual ownership of the script.
+
+**What about someone copying my characters or story beats?**  
+APS distinguishes between *copying* (cultural participation) and *claiming* (fraud about authorship). Every creative act is cryptographically signed with your Nostr keypair—origin is mathematically provable. Someone can riff on your work, but they cannot claim to have created it. The provenance chain proves you made it first.
+
+**Can I set terms for how my work is used?**  
+Yes, through voluntary covenants—metadata attached to your creations signaling your expectations ("attribution required," "commercial use needs license," etc.). These are purely social signals; the protocol doesn't enforce them. But communities and reputation markets (funded via WOSS) can track who respects vs. ignores covenants, creating social costs for violators.
+
+**Isn't this just trusting people to be good?**  
+Partly—but with transparency. Covenants are legible. Provenance is unforgeable. Reputation aggregators can surface who consistently honors vs. exploits creator expectations. The protocol enables markets for verification and dispute mediation, compensated via WOSS. Enforcement isn't baked in, but coordination tools can emerge.
+
 
 ## Long-Term Perspective
 
