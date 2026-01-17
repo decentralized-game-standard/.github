@@ -29,6 +29,31 @@ Real-world evidence shows the cost:
 
 These stem from forced centralization at the foundation. The alternative is not anarchy—it's an open base layer with voluntary centralization where useful.
 
+## The Discipline of Protocol Restraint
+
+Long-lived protocols share a pattern: aggressive exclusion. They define minimal coordination primitives and deliberately refuse features that could be layered above.
+
+| Protocol | What It Does | What It Deliberately Excludes |
+|----------|--------------|-------------------------------|
+| **TCP/IP** | Packet routing | Content, security, identity, application semantics |
+| **SMTP** | Store-and-forward messages | Encryption, spam filtering, read receipts |
+| **Bitcoin** | Timestamped transaction ordering | Smart contracts, identity, privacy, governance |
+| **MIDI** | Note events | Sound synthesis, audio, timing guarantees |
+| **Musical notation** | Pitch and duration | Timbre, dynamics, expression |
+
+The end-to-end principle (Saltzer, Reed, Clark 1984) articulates why: *functionality belongs at endpoints, not in the network*. Protocols that try to solve every problem become complex, fragile, and capturable. Protocols that stay minimal become infrastructure—neutral substrates that outlive their creators.
+
+DGS follows this discipline:
+
+- **AEMS** defines entity structure, not databases or marketplaces
+- **GERS** defines data-flow primitives, not engines or frameworks
+- **WOSS** defines offer/fulfill/ack, not escrow or reputation systems
+- **Ludic Structures** defines notation, not execution
+
+When you ask "why doesn't DGS handle X?"—dispute resolution, content moderation, identity verification, complex governance—the answer is the same answer TCP/IP gives: *because X is not the protocol's job*. Communities, markets, and applications handle X. The protocol is the neutral ground they coordinate on.
+
+This restraint is not laziness or incompleteness. It is the design philosophy that lets protocols endure for decades while platforms rise and fall.
+
 ## Core Premise: Genres as Sports, Not Products
 
 A battle royale should feel like soccer: core concepts (shrinking zone, looting, last-player-standing) are neutral and persistent. Anyone can host a quick match with friends or strangers. Items earned in one session carry forward. Niche variants (zombie mode, prop hunt) emerge without approval. Massive, polished tournaments with ranked ladders and streaming can exist as opt-in services—funded directly, competed against freely.
