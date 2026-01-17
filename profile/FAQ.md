@@ -1,6 +1,6 @@
 # Frequently Asked Questions: Decentralized Game Standard
 
-🏠 **[Overview](https://github.com/decentralized-game-standard)** · 📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[GERS](https://github.com/decentralized-game-standard/gers-standard)** · ⚡ **[WOSS](https://github.com/decentralized-game-standard/woss-standard)** · ✍️ **[APS](https://github.com/decentralized-game-standard/decentralized-game-protection)** · 📜 **[Ludic](https://github.com/decentralized-game-standard/ludic-standard)**
+🏠 **[Overview](https://github.com/decentralized-game-standard)** · 📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[GERS](https://github.com/decentralized-game-standard/gers-standard)** · ⚡ **[WOSS](https://github.com/decentralized-game-standard/woss-standard)**
 
 ---
 
@@ -68,26 +68,17 @@ Games retain full authority over their Manifestations (AEMS) and Processor selec
 **Is this suitable for high-performance, real-time games?**  
 Untested at AAA scale. Decentralized data introduces challenges for sub-millisecond synchronization. Turn-based, asynchronous, or smaller-scale titles are more natural starting points. Performance optimizations are an open research area.
 
-## Technical Deep Dive
+## Technical Quick Reference
 
-**How is identity handled?**  
-Your Nostr keypair serves as your universal identity—no additional system needed. The same pubkey signs entity ownership, state updates, work offers, and game actions. Profiles (name, avatar, bio) come from standard Nostr NIP-05/NIP-57 features.
+**Identity**: Your Nostr keypair is your universal identity across all protocols.
 
-**How does multiplayer work?**  
-The standards are transport-agnostic. WOSS can coordinate matchmaking offers ("hosting a lobby for X game") and session funding. Actual networking can use WebRTC, dedicated relays, or hybrid approaches built on top.
+**Multiplayer**: Transport-agnostic. WOSS coordinates matchmaking; actual networking uses WebRTC, dedicated relays, or hybrids.
 
-**What about anti-cheat and trust?**  
-No built-in enforcement—the protocol enables markets for verification. Third parties can offer signed attestations, replay analysis, or reputation aggregation, compensated via WOSS. Games choose their trust model.
+**Anti-cheat/trust**: No built-in enforcement. Third parties offer verification services compensated via WOSS.
 
-**How do mods fit in?**  
-GERS treats mods as additional Processors that slot into the network. Distribution and compensation happen naturally through WOSS and AEMS provenance.
+**Mods**: GERS treats mods as Processors that slot into the network. Distribution and payment via WOSS.
 
-**How do the protocols connect in practice?**  
-- AEMS provides the persistent "what" (entities and state)
-- GERS provides the runtime "how" (Processors transforming Records)
-- WOSS provides the economic "why" (incentives for creation and maintenance)
-
-Example flow: A community defines an AEMS sword → multiple games manifest it differently in their GERS engines → a modder adds a new visual Processor and gets paid via WOSS → ownership transfers remain valid across all implementations.
+**Protocol integration**: AEMS (what exists) → GERS (how it runs) → WOSS (how value flows).
 
 ## Authored Experiences and Provenance
 
@@ -123,23 +114,11 @@ Open standards don't require permission. Viability can be proven by independents
 **How will the standards evolve?**  
 Through open discussion and implementation feedback. Once proven patterns emerge, the specifications can stabilize like other internet protocols. No central governance—just community consensus via adoption.
 
-## Immediate Next Steps
+## Getting Started
 
-**What is the easiest way to engage today?**  
-Try a Tier 1 prototype—no coding required:
-- **AEMS**: Publish a kind 30001 event defining a simple item
-- **GERS**: Draw a data-flow diagram for a basic game loop
-- **WOSS**: Broadcast a kind 32001 offer for a small task
+**Easiest first step**: Publish a kind 30001 event on Nostr defining a simple item (no coding required).
 
-These actions demonstrate the core ideas in minutes.
-
-**What would count as a meaningful milestone?**  
-A working demo where:
-- An AEMS entity is shared between two independent game prototypes
-- A GERS processor is added and compensated via WOSS
-- Ownership/state persists across sessions
-
-This would shift the project from speculation to tangible proof-of-concept.
+**Meaningful milestone**: A demo where an AEMS entity is shared between two game prototypes, with WOSS-compensated contributions and persistent state.
 
 ## Closing Note
 

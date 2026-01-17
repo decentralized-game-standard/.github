@@ -26,7 +26,6 @@ We generally don't publish these rules widely to avoid bikeshedding, but they ar
 *   `/aems-standard`: The entity standard (AEMS).
 *   `/gers-standard`: The engine standard (GERS).
 *   `/woss-standard`: The coordination standard (WOSS).
-*   `/ludic-standard`: Conceptual exploration of declarative rulesets (not yet a formal protocol).
 
 ## Emergency Contacts
 
