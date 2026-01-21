@@ -6,7 +6,7 @@
 
 ## Architecture Guidelines
 
-We are building protocols, not platforms. When proposing changes to AEMS, GERS, or WOSS, strict adherence to these rules is required:
+We are building protocols, not platforms. When proposing changes to AEMS, RUNS, or WOCS, strict adherence to these rules is required:
 
 1.  **No Rent-Seeking**: If your proposal adds a fee, token, or "governance" layer that extracts value without adding work, it will be rejected. 
 2.  **Sats Only**: We settle in Bitcoin (Lightning). Do not propose new tokens for settlement.
@@ -24,8 +24,8 @@ We generally don't publish these rules widely to avoid bikeshedding, but they ar
 
 *   `/profile`: The public face. High-level manifesto.
 *   `/aems-standard`: The entity standard (AEMS).
-*   `/gers-standard`: The engine standard (GERS).
-*   `/woss-standard`: The coordination standard (WOSS).
+*   `/runs-standard`: The engine standard (RUNS).
+*   `/wocs-standard`: The coordination standard (WOCS).
 
 ## Emergency Contacts
 

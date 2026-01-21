@@ -12,7 +12,7 @@ This is not utopian purity demanding everything be fully decentralized. It is pr
 
 ---
 
-📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[GERS](https://github.com/decentralized-game-standard/gers-standard)** · ⚡ **[WOSS](https://github.com/decentralized-game-standard/woss-standard)** · ❓ **[FAQ](https://github.com/decentralized-game-standard/.github/blob/main/profile/FAQ.md)**
+📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[RUNS](https://github.com/decentralized-game-standard/runs-standard)** · ⚡ **[WOCS](https://github.com/decentralized-game-standard/wocs-standard)** · ❓ **[FAQ](https://github.com/decentralized-game-standard/.github/blob/main/profile/FAQ.md)**
 
 ---
 
@@ -46,8 +46,8 @@ The end-to-end principle (Saltzer, Reed, Clark 1984) articulates why: *functiona
 DGS follows this discipline:
 
 - **AEMS** defines entity structure, not databases or marketplaces
-- **GERS** defines data-flow primitives, not engines or frameworks
-- **WOSS** defines offer/fulfill/ack, not escrow or reputation systems
+- **RUNS** defines data-flow primitives, not engines or frameworks
+- **WOCS** defines offer/fulfill/ack, not escrow or reputation systems
 - **Ludic Structures** defines notation, not execution
 
 When you ask "why doesn't DGS handle X?"—dispute resolution, content moderation, identity verification, complex governance—the answer is the same answer TCP/IP gives: *because X is not the protocol's job*. Communities, markets, and applications handle X. The protocol is the neutral ground they coordinate on.
@@ -63,8 +63,8 @@ The standard achieves this by separating durable artifacts from interpretive rul
 | Protocol | Core Mechanism | Primary Failures Addressed |
 |----------|----------------|---------------------------|
 | **AEMS** (Asset-Entity-Manifestation-State) | Nostr events defining universal Entities, game-specific Manifestations, mutable State, and optional ownership | Preservation, asset lock-in, interoperability |
-| **GERS** (Game Engine Record Standard) | Data-flow engine architecture with uniform Records and stateless Processors | Engine rigidity, mod fragility, long-term maintenance |
-| **WOSS** (Work-Offer Settlement Standard) | Three-event coordination language settled via Lightning | Gatekept value flow, centralized coordination, discovery rents |
+| **RUNS** (Record Update Network Processor) | Data-flow engine architecture with uniform Records and stateless Processors | Engine rigidity, mod fragility, long-term maintenance |
+| **WOCS** (Work Order Coordination Settlement) | Three-event coordination language settled via Lightning | Gatekept value flow, centralized coordination, discovery rents |
 
 Built on mature primitives—Nostr for resilient data, Lightning for instant micropayments—no blockchains, tokens, or new consensus layers.
 
@@ -76,11 +76,11 @@ Imagine "MOBA" as a genre like basketball:
 - Different groups publish Manifestations: "classic Dota-style," "fast-paced beginner variant," "underwater twist."
 - Players own instances with history and state that persist on Nostr.
 
-Casual play: Someone posts a WOSS offer—"500 sats buy-in for a quick MOBA lobby tonight, classic rules." Others join via any GERS-compatible client. A community-hosted server (or P2P mesh) runs the match. Items import automatically. No accounts, no platform—just play.
+Casual play: Someone posts a WOCS offer—"500 sats buy-in for a quick MOBA lobby tonight, classic rules." Others join via any RUNS-compatible client. A community-hosted server (or P2P mesh) runs the match. Items import automatically. No accounts, no platform—just play.
 
 Niche play: A small group runs their weird variant weekly. It stays cult forever, like church-league softball.
 
-Pro-layer play: A popular organizer bounties high-uptime servers, anti-cheat Processors, and ranked matchmaking via recurring WOSS offers. Thousands opt in for polished experience and streamed tournaments. Third-party clients emerge with slick UI, discovery feeds, or premium overlays. If the organizer gets extractive, players fork the ruleset or drop to raw pickup lobbies—the foundation guarantees exit.
+Pro-layer play: A popular organizer bounties high-uptime servers, anti-cheat Processors, and ranked matchmaking via recurring WOCS offers. Thousands opt in for polished experience and streamed tournaments. Third-party clients emerge with slick UI, discovery feeds, or premium overlays. If the organizer gets extractive, players fork the ruleset or drop to raw pickup lobbies—the foundation guarantees exit.
 
 Value flows horizontally: modders earn directly for new Manifestations, artists for assets, hosts for reliability, streamers for casting. Ecosystems grow around the open ruleset (client apps, analytics tools, "equipment" like custom renderers) without anyone owning the game itself.
 
@@ -98,7 +98,7 @@ These authored experiences fit the same foundation through a philosophy of **abu
 
 This rejects the false choice between "fully open commons" and "DRM-protected products." Authors retain attribution and can earn from first experiences. Copiers participate in cultural propagation. Neither requires enforcement mechanisms that contradict the open foundation.
 
-The Authorial Provenance Standard (APS) details this approach—provenance over property, covenants without enforcement, and markets for reputation and verification funded via WOSS.
+The Authorial Provenance Standard (APS) details this approach—provenance over property, covenants without enforcement, and markets for reputation and verification funded via WOCS.
 
 ## The Protocols
 
@@ -111,7 +111,9 @@ Layered Nostr events make artifacts independent and interpretable.
 
 Items earned in one game persist for import elsewhere.
 
-### GERS: Composable Engines
+### RUNS: Composable Engines
+### WOCS: Permissionless Coordination
+- A modder (funded via WOCS) adds visual flair Processor.
 Data-oriented design: everything is Records with Fields, transformed by stateless Processors wired into Networks.
 - Swap renderers, physics, or input without rewriting core.
 - Mods are native Processor additions.
@@ -119,7 +121,8 @@ Data-oriented design: everything is Records with Fields, transformed by stateles
 
 Engines import AEMS Entities as Records and apply selected Manifestations.
 
-### WOSS: Permissionless Coordination
+### WOCS: Permissionless Coordination
+- A modder (funded via WOCS) adds visual flair Processor.
 Three Nostr events (Offer, Fulfill, Ack) settled via Lightning.
 - Fund servers, bounty assets, pay modders, pool tournament prizes.
 - Direct, instant, no rake.
@@ -138,7 +141,7 @@ A player discovers a rare shield:
 - Defined universally via AEMS Entity.
 - Manifested differently across games.
 - State tracks battle history.
-- A modder (funded via WOSS) adds visual flair Processor.
+- A modder (funded via WOCS) adds visual flair Processor.
 - Ownership transfers permissionlessly.
 - One hosted game ends—the shield lives on for the next pickup match or pro tournament.
 

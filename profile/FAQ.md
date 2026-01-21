@@ -1,13 +1,13 @@
 # Frequently Asked Questions: Decentralized Game Standard
 
-🏠 **[Overview](https://github.com/decentralized-game-standard)** · 📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[GERS](https://github.com/decentralized-game-standard/gers-standard)** · ⚡ **[WOSS](https://github.com/decentralized-game-standard/woss-standard)**
+🏠 **[Overview](https://github.com/decentralized-game-standard)** · 📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[RUNS](https://github.com/decentralized-game-standard/runs-standard)** · ⚡ **[WOCS](https://github.com/decentralized-game-standard/wocs-standard)**
 
 ---
 
 ## Overview
 
 **What is the Decentralized Game Standard?**  
-A set of three minimal, interlocking protocols—AEMS (Asset-Entity-Manifestation-State), GERS (Game Engine Record Standard), and WOSS (Work-Offer Settlement Standard)—designed to make digital games more resilient, interoperable, and community-driven. Built entirely on existing open infrastructure (Nostr for persistent data and Lightning for settlement), they separate durable game objects from interpretive rules, enable modular engine construction, and facilitate direct peer-to-peer coordination. The aim is to create games that can persist for generations, much like chess or go, without depending on any single company or server.
+A set of three minimal, interlocking protocols—AEMS (Asset-Entity-Manifestation-State), RUNS (Record Update Network Processor), and WOCS (Work Order Coordination Settlement)—designed to make digital games more resilient, interoperable, and community-driven. Built entirely on existing open infrastructure (Nostr for persistent data and Lightning for settlement), they separate durable game objects from interpretive rules, enable modular engine construction, and facilitate direct peer-to-peer coordination. The aim is to create games that can persist for generations, much like chess or go, without depending on any single company or server.
 
 **Why does this matter?**  
 Most digital games are architecturally fragile: they rely on centralized servers that can be switched off, revocable licenses that can be taken away, and proprietary engines that lock in assets and progress. The result is cultural loss—entire worlds, inventories, and communities disappear when support ends. This standard proposes an alternative path where players retain meaningful control, creators earn directly, and games can evolve indefinitely through open contribution.
@@ -21,7 +21,7 @@ Not yet. These are conceptual specifications (2026-01-14) with no reference impl
 Over time, you might:
 - Carry items, characters, or progress across different games via shared AEMS entities
 - Retain ownership of assets through cryptographic keys, independent of any studio
-- Earn sats for contributions (hosting servers, testing, or creating content) via WOSS
+- Earn sats for contributions (hosting servers, testing, or creating content) via WOCS
 - Play games that survive studio closures, maintained by communities
 
 **Will gameplay feel different?**  
@@ -36,11 +36,11 @@ Early experiments may involve trade-offs—decentralized data fetching can intro
 
 **What advantages could this offer developers?**  
 - AEMS allows defining entities once and reusing them across projects
-- GERS enables truly modular engines—replace renderers, physics, or input systems without breaking everything
-- WOSS provides direct, instant payment for features, fixes, or assets—no platform cuts
+- RUNS enables truly modular engines—replace renderers, physics, or input systems without breaking everything
+- WOCS provides direct, instant payment for features, fixes, or assets—no platform cuts
 
 **How realistic is adoption for indie or solo developers?**  
-The protocols are deliberately lightweight. A solo developer could start by importing AEMS entities into a simple GERS-style pipeline and accepting WOSS payments for custom work. No large team or funding required to experiment.
+The protocols are deliberately lightweight. A solo developer could start by importing AEMS entities into a simple RUNS-style pipeline and accepting WOCS payments for custom work. No large team or funding required to experiment.
 
 **What are the current technical limitations?**  
 Nostr relay availability varies; some events may require multiple relays for reliable retrieval. Lightning payments work well for micro-transactions but routing can occasionally fail. These are known constraints of the underlying infrastructure, not the standards themselves.
@@ -60,10 +60,10 @@ Review the individual READMEs and experiment freely.
 - Games that continue generating value long after active development ends
 
 **Does this require abandoning existing engines?**  
-No. GERS patterns can be incrementally adopted within existing codebases. AEMS entities can be imported alongside proprietary assets. Studios can participate selectively—monitoring, contributing feedback, or running internal experiments.
+No. RUNS patterns can be incrementally adopted within existing codebases. AEMS entities can be imported alongside proprietary assets. Studios can participate selectively—monitoring, contributing feedback, or running internal experiments.
 
 **How do we maintain creative control?**  
-Games retain full authority over their Manifestations (AEMS) and Processor selection (GERS). Shared entities are optional; proprietary ones remain possible. The standards enable interoperability without mandating it.
+Games retain full authority over their Manifestations (AEMS) and Processor selection (RUNS). Shared entities are optional; proprietary ones remain possible. The standards enable interoperability without mandating it.
 
 **Is this suitable for high-performance, real-time games?**  
 Untested at AAA scale. Decentralized data introduces challenges for sub-millisecond synchronization. Turn-based, asynchronous, or smaller-scale titles are more natural starting points. Performance optimizations are an open research area.
@@ -72,23 +72,23 @@ Untested at AAA scale. Decentralized data introduces challenges for sub-millisec
 
 **Identity**: Your Nostr keypair is your universal identity across all protocols.
 
-**Multiplayer**: Transport-agnostic. WOSS coordinates matchmaking; actual networking uses WebRTC, dedicated relays, or hybrids.
+**Multiplayer**: Transport-agnostic. WOCS coordinates matchmaking; actual networking uses WebRTC, dedicated relays, or hybrids.
 
-**Anti-cheat/trust**: No built-in enforcement. Third parties offer verification services compensated via WOSS.
+**Anti-cheat/trust**: No built-in enforcement. Third parties offer verification services compensated via WOCS.
 
-**Mods**: GERS treats mods as Processors that slot into the network. Distribution and payment via WOSS.
+**Mods**: RUNS treats mods as Processors that slot into the network. Distribution and payment via WOCS.
 
-**Protocol integration**: AEMS (what exists) → GERS (how it runs) → WOSS (how value flows).
+**Protocol integration**: AEMS (what exists) → RUNS (how it runs) → WOCS (how value flows).
 
 ## Authored Experiences and Provenance
 
 **Does this standard only work for "sports-like" games? What about puzzle games, mysteries, or narrative experiences?**  
-The core protocols (AEMS, GERS, WOSS) naturally serve commons-style games—those that benefit from open variation like folklore or sports. But authored experiences (puzzles, mysteries, artistic visions) fit the same foundation through the Authorial Provenance Standard (APS).
+The core protocols (AEMS, RUNS, WOCS) naturally serve commons-style games—those that benefit from open variation like folklore or sports. But authored experiences (puzzles, mysteries, artistic visions) fit the same foundation through the Authorial Provenance Standard (APS).
 
 **How can authored works exist in an open system without being "spoiled"?**  
 The key insight is that authored experiences monetize the *first encounter*, not eternal exclusivity. A puzzle game's value is in the journey of solving it—once solved, the solution naturally becomes known. APS enables:
 - **Sealed content markers** — Authors signal which elements are revelation-dependent
-- **First-experience payments** — Players pay (via WOSS) for the curated experience of proper revelation
+- **First-experience payments** — Players pay (via WOCS) for the curated experience of proper revelation
 - **Post-encounter openness** — Content may open naturally after the experience, contributing to cultural commons
 
 This is like paying for a theater ticket: you pay for the experience of first revelation, not perpetual ownership of the script.
@@ -97,10 +97,10 @@ This is like paying for a theater ticket: you pay for the experience of first re
 APS distinguishes between *copying* (cultural participation) and *claiming* (fraud about authorship). Every creative act is cryptographically signed with your Nostr keypair—origin is mathematically provable. Someone can riff on your work, but they cannot claim to have created it. The provenance chain proves you made it first.
 
 **Can I set terms for how my work is used?**  
-Yes, through voluntary covenants—metadata attached to your creations signaling your expectations ("attribution required," "commercial use needs license," etc.). These are purely social signals; the protocol doesn't enforce them. But communities and reputation markets (funded via WOSS) can track who respects vs. ignores covenants, creating social costs for violators.
+Yes, through voluntary covenants—metadata attached to your creations signaling your expectations ("attribution required," "commercial use needs license," etc.). These are purely social signals; the protocol doesn't enforce them. But communities and reputation markets (funded via WOCS) can track who respects vs. ignores covenants, creating social costs for violators.
 
 **Isn't this just trusting people to be good?**  
-Partly—but with transparency. Covenants are legible. Provenance is unforgeable. Reputation aggregators can surface who consistently honors vs. exploits creator expectations. The protocol enables markets for verification and dispute mediation, compensated via WOSS. Enforcement isn't baked in, but coordination tools can emerge.
+Partly—but with transparency. Covenants are legible. Provenance is unforgeable. Reputation aggregators can surface who consistently honors vs. exploits creator expectations. The protocol enables markets for verification and dispute mediation, compensated via WOCS. Enforcement isn't baked in, but coordination tools can emerge.
 
 
 ## Long-Term Perspective
@@ -118,7 +118,7 @@ Through open discussion and implementation feedback. Once proven patterns emerge
 
 **Easiest first step**: Publish a kind 30001 event on Nostr defining a simple item (no coding required).
 
-**Meaningful milestone**: A demo where an AEMS entity is shared between two game prototypes, with WOSS-compensated contributions and persistent state.
+**Meaningful milestone**: A demo where an AEMS entity is shared between two game prototypes, with WOCS-compensated contributions and persistent state.
 
 ## Closing Note
 

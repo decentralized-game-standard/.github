@@ -48,7 +48,7 @@ The Authorial Provenance Standard makes **claiming impossible** while allowing c
 
 ### 1. Unforgeable Attribution
 
-Every AEMS Entity, GERS Processor, or game element is a signed Nostr event with a timestamp. This is inherent to the protocol—no additional mechanism needed.
+Every AEMS Entity, RUNS Processor, or gamified element is a signed Nostr event with a timestamp. This is inherent to the protocol—no additional mechanism needed.
 
 If someone rips your character and claims authorship, the provenance chain refutes them instantly. The original is timestamped and immutably attributed. You don't need courts or takedown requests. You need only point to the signature.
 
@@ -71,16 +71,16 @@ entity:
 These covenants are **purely social**. The protocol doesn't enforce them. But:
 
 - Communities can filter, flag, or preference-rank based on covenant compliance
-- Reputation aggregators (funded via WOSS) can track who honors vs. ignores covenants
+- Reputation aggregators (funded via WOCS) can track who honors vs. ignores covenants
 - Social costs accrue to covenant violators—their npubs become associated with extraction
 
 This mirrors how Creative Commons works in practice: rarely litigated, yet widely respected because reputation matters.
 
-### 3. Market Coordination via WOSS
+### 3. Market Coordination via WOCS
 
 The protocol doesn't enforce covenants, but markets can emerge to provide verification, reputation, and dispute resolution services:
 
-- **Attribution Verification** — Third parties offer services to prove/disprove authorship claims, compensated via WOSS bounties
+- **Attribution Verification** — Third parties offer services to prove/disprove authorship claims, compensated via WOCS bounties
 - **Covenant Compliance Tracking** — Aggregators maintain public records of who honors covenants
 - **Reputation Markets** — Provenance chains become social capital; strong histories attract future commissions
 - **Dispute Mediation** — Voluntary arbitration services for contested attribution
@@ -97,7 +97,7 @@ APS provides attribution infrastructure, not enforcement mechanisms. Like copyri
 | **Enforcement** | Protocol signals, not polices | Social pressure, reputation markets |
 | **Takedowns** | Protocol is permissionless | Community moderation, legal systems |
 | **Content verification** | Protocol proves origin, not quality | Curation services |
-| **Licensing compliance** | Protocol publishes covenants, not audits | Third-party monitoring via WOSS |
+| **Licensing compliance** | Protocol publishes covenants, not audits | Third-party monitoring via WOCS |
 
 APS makes provenance undeniable and expectations legible. Everything else is social coordination—enabled by the protocol, not embedded in it.
 
@@ -121,7 +121,7 @@ experience:
 ```
 
 **The Economics**
-- Players pay (via WOSS) for the *experience* of proper revelation—not for the "content" which could theoretically be spoiled
+- Players pay (via WOCS) for the *experience* of proper revelation—not for the "content" which could theoretically be spoiled
 - Payment unlocks the author-intended sequence in compliant clients
 - After completion, players have experienced what they paid for—whether content becomes "open" afterward is the author's choice
 
@@ -153,9 +153,9 @@ Explicit anti-features:
 
 **AEMS** — Covenant tags on Entities and Manifestations signal author expectations. Provenance is native to signed events.
 
-**GERS** — Sealed content markers in containers enable revelation-sequenced experiences. Clients choose how to respect them.
+**RUNS** — Sealed content markers in containers enable revelation-sequenced experiences. Clients choose how to respect them.
 
-**WOSS** — Coordinates reputation markets, attribution verification, first-experience payments, and dispute mediation as voluntary third-party services.
+**WOCS** — Coordinates reputation markets, attribution verification, first-experience payments, and dispute mediation as voluntary third-party services.
 
 ## The Unified Vision
 
@@ -164,7 +164,7 @@ Authors of authored experiences and curators of commons games can coexist on the
 - A puzzle game publishes sealed content with covenants requesting first-play payment
 - A folklore-like battle royale publishes fully open with "attribution appreciated"
 - Both persist forever via Nostr
-- Both benefit from WOSS-funded infrastructure
+- Both benefit from WOCS-funded infrastructure
 - Neither depends on corporate gatekeepers or enforcement mechanisms
 
 The authored work's value is in the experience—captured at revelation, not locked forever. The commons work's value is in infinite variation—enabled by openness. Both are products of creative labor deserving attribution. Neither requires DRM.
