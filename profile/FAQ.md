@@ -37,7 +37,7 @@ Early experiments may involve trade-offs—decentralized data fetching can intro
 **What advantages could this offer developers?**  
 - AEMS allows defining entities once and reusing them across projects
 - RUNS enables truly modular engines—replace renderers, physics, or input systems without breaking everything
-- WOCS provides direct, instant payment for features, fixes, or assets—no platform cuts
+- WOCS enables direct coordination of server hosting, asset creation, and feature development—instant settlement, no platform rents
 
 **How realistic is adoption for indie or solo developers?**  
 The protocols are deliberately lightweight. A solo developer could start by importing AEMS entities into a simple RUNS-style pipeline and accepting WOCS payments for custom work. No large team or funding required to experiment.
@@ -74,11 +74,11 @@ Untested at AAA scale. Decentralized data introduces challenges for sub-millisec
 
 **Multiplayer**: Transport-agnostic. WOCS coordinates matchmaking; actual networking uses WebRTC, dedicated relays, or hybrids.
 
-**Anti-cheat/trust**: No built-in enforcement. Third parties offer verification services compensated via WOCS.
+**Anti-cheat/trust**: No built-in enforcement. Third parties offer verification services coordinated via WOCS.
 
-**Mods**: RUNS treats mods as Processors that slot into the network. Distribution and payment via WOCS.
+**Mods**: RUNS treats mods as Processors that slot into the network. Development coordinated via WOCS.
 
-**Protocol integration**: AEMS (what exists) → RUNS (how it runs) → WOCS (how value flows).
+**Protocol integration**: AEMS (what exists) → RUNS (how it runs) → WOCS (how ecosystem services are coordinated).
 
 ## Authored Experiences and Provenance
 

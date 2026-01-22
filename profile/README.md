@@ -12,7 +12,7 @@ This is not utopian purity demanding everything be fully decentralized. It is pr
 
 ---
 
-📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[RUNS](https://github.com/decentralized-game-standard/runs-standard)** · ⚡ **[WOCS](https://github.com/decentralized-game-standard/wocs-standard)** · ❓ **[FAQ](https://github.com/decentralized-game-standard/.github/blob/main/profile/FAQ.md)**
+📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[RUNS](https://github.com/decentralized-game-standard/runs-standard)** · 📖 **[RUNS Library](https://github.com/decentralized-game-standard/runs-standard-library)** · ⚡ **[WOCS](https://github.com/decentralized-game-standard/wocs-standard)** · 🎭 **[Ludic](https://github.com/decentralized-game-standard/ludic-notation-standard)** · ❓ **[FAQ](https://github.com/decentralized-game-standard/.github/blob/main/profile/FAQ.md)**
 
 ---
 
@@ -46,9 +46,9 @@ The end-to-end principle (Saltzer, Reed, Clark 1984) articulates why: *functiona
 DGS follows this discipline:
 
 - **AEMS** defines entity structure, not databases or marketplaces
-- **RUNS** defines data-flow primitives, not engines or frameworks
-- **WOCS** defines offer/fulfill/ack, not escrow or reputation systems
-- **Ludic Structures** defines notation, not execution
+- **RUNS** defines execution substrate and data-flow patterns, not specific engines or frameworks
+- **WOCS** defines minimal coordination primitives (offer/fulfill/ack), not escrow, reputation, or payment processing
+- **Ludic Notation** defines interactive grammar, not execution or timing
 
 When you ask "why doesn't DGS handle X?"—dispute resolution, content moderation, identity verification, complex governance—the answer is the same answer TCP/IP gives: *because X is not the protocol's job*. Communities, markets, and applications handle X. The protocol is the neutral ground they coordinate on.
 
@@ -63,8 +63,8 @@ The standard achieves this by separating durable artifacts from interpretive rul
 | Protocol | Core Mechanism | Primary Failures Addressed |
 |----------|----------------|---------------------------|
 | **AEMS** (Asset-Entity-Manifestation-State) | Nostr events defining universal Entities, game-specific Manifestations, mutable State, and optional ownership | Preservation, asset lock-in, interoperability |
-| **RUNS** (Record Update Network Processor) | Data-flow engine architecture with uniform Records and stateless Processors | Engine rigidity, mod fragility, long-term maintenance |
-| **WOCS** (Work Order Coordination Settlement) | Three-event coordination language settled via Lightning | Gatekept value flow, centralized coordination, discovery rents |
+| **RUNS** (Record Update Network Processor) | Execution substrate: uniform Records transformed by stateless Processors wired into explicit Networks | Engine rigidity, mod fragility, long-term maintenance |
+| **WOCS** (Work Order Coordination Settlement) | Coordination primitive: broadcast needs, verify delivery, settle via Lightning—no platform, no escrow, no reputation | Gatekept coordination, siloed communities, single points of failure |
 
 Built on mature primitives—Nostr for resilient data, Lightning for instant micropayments—no blockchains, tokens, or new consensus layers.
 
@@ -112,22 +112,20 @@ Layered Nostr events make artifacts independent and interpretable.
 Items earned in one game persist for import elsewhere.
 
 ### RUNS: Composable Engines
-### WOCS: Permissionless Coordination
-- A modder (funded via WOCS) adds visual flair Processor.
 Data-oriented design: everything is Records with Fields, transformed by stateless Processors wired into Networks.
 - Swap renderers, physics, or input without rewriting core.
 - Mods are native Processor additions.
 - Naturally supports parallelism and explicit data flow.
 
-Engines import AEMS Entities as Records and apply selected Manifestations.
+Engines import AEMS Entities as Records and apply selected Manifestations. The [RUNS Standard Library](https://github.com/decentralized-game-standard/runs-standard-library) provides semantic agreement on fundamental schemas (`runs:time`, `runs:transform`, `runs:input`).
 
 ### WOCS: Permissionless Coordination
-- A modder (funded via WOCS) adds visual flair Processor.
-Three Nostr events (Offer, Fulfill, Ack) settled via Lightning.
-- Fund servers, bounty assets, pay modders, pool tournament prizes.
-- Direct, instant, no rake.
+A minimal coordination primitive built on Nostr: three events (Offer, Fulfill, Ack) with Lightning settlement.
+- Broadcast a need with committed settlement amount (Offer).
+- Prove delivery and request payment (Fulfill).
+- Acknowledge completion with payment proof (Ack).
 
-Communities coordinate at any scale without gatekeepers.
+No platform, no mandatory reputation, no built-in escrow—just open signals enabling strangers to coordinate server hosting, anti-cheat bounties, asset creation, tournament pooling, and any other ecosystem service. Communities coordinate at any scale without gatekeepers.
 
 ## Technical Foundation
 
