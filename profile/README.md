@@ -63,7 +63,7 @@ The standard achieves this by separating durable artifacts from interpretive rul
 | Protocol | Core Mechanism | Primary Failures Addressed |
 |----------|----------------|---------------------------|
 | **AEMS** (Asset-Entity-Manifestation-State) | Nostr events defining universal Entities, game-specific Manifestations, player-owned Assets, and mutable State | Preservation, asset lock-in, interoperability |
-| **RUNS** (Record Update Network Processor) | Execution substrate: uniform Records transformed by stateless Processors wired into explicit Networks | Engine rigidity, mod fragility, long-term maintenance |
+| **RUNS** (Record Update Network System) | Execution substrate: uniform Records transformed by stateless Processors wired into explicit Networks | Engine rigidity, mod fragility, long-term maintenance |
 | **WOCS** (Work Order Coordination Settlement) | Coordination primitive: broadcast needs, verify delivery, settle via Lightning—no platform, no escrow, no reputation | Gatekept coordination, siloed communities, single points of failure |
 
 Built on mature primitives—Nostr for resilient data, Lightning for instant micropayments—no blockchains, tokens, or new consensus layers.
@@ -80,11 +80,11 @@ Casual play: Someone posts a WOCS offer—"500 sats buy-in for a quick MOBA lobb
 
 Niche play: A small group runs their weird variant weekly. It stays cult forever, like church-league softball.
 
-Pro-layer play: A popular organizer funds high-uptime servers, anti-cheat Processors, and ranked matchmaking via recurring WOCS offers. Thousands opt in for polished experience and streamed tournaments. Third-party clients emerge with slick UI, discovery feeds, or premium overlays. If the organizer gets extractive, players fork the ruleset or drop to raw pickup lobbies—the foundation guarantees exit.
+Pro-layer play: A popular organizer funds high-uptime servers, anti-cheat services, and ranked matchmaking via recurring WOCS offers. Thousands opt in for polished experience and streamed tournaments. Third-party clients emerge with slick UI, discovery feeds, or premium overlays. If the organizer gets extractive, players fork the ruleset or drop to raw pickup lobbies—the foundation guarantees exit.
 
 Value flows horizontally: modders earn directly for new Manifestations, artists for assets, hosts for reliability, streamers for casting. Ecosystems grow around the open ruleset (client apps, analytics tools, "equipment" like custom renderers) without anyone owning the game itself.
 
-Single-player adventures (Zelda-likes) fit too: worlds as shared Entity collections, mods as new Manifestations/Processors, persistence beyond any one engine.
+Single-player adventures (Zelda-likes) fit too: worlds as shared Entity collections, mods as new Manifestations, execution via community Processors, persistence beyond any one engine.
 
 ## Scope: Commons and Authored Experiences
 
@@ -117,7 +117,7 @@ Data-oriented design: everything is Records with Fields, transformed by stateles
 - Mods are native Processor additions.
 - Naturally supports parallelism and explicit data flow.
 
-Engines import AEMS Entities as Records and apply selected Manifestations. The [RUNS Standard Library](https://github.com/decentralized-game-standard/runs-standard-library) provides semantic agreement on fundamental schemas (`runs:time`, `runs:transform`, `runs:input`).
+RUNS runtimes reference AEMS Entities for content definitions and apply selected Manifestations. The [RUNS Standard Library](https://github.com/decentralized-game-standard/runs-standard-library) provides semantic agreement on fundamental schemas (`runs:time`, `runs:transform`, `runs:input`).
 
 ### WOCS: Permissionless Coordination
 A minimal coordination primitive built on Nostr: three events (Offer, Fulfill, Ack) with Lightning settlement.
@@ -139,7 +139,7 @@ A player discovers a rare shield:
 - Defined universally via AEMS Entity.
 - Manifested differently across games.
 - State tracks battle history.
-- A modder (funded via WOCS) adds visual flair Processor.
+- A modder (funded via WOCS) publishes a new Manifestation with visual flair.
 - Ownership transfers permissionlessly.
 - One hosted game ends—the shield lives on for the next pickup match or pro tournament.
 
