@@ -62,7 +62,7 @@ The standard achieves this by separating durable artifacts from interpretive rul
 
 | Protocol | Core Mechanism | Primary Failures Addressed |
 |----------|----------------|---------------------------|
-| **AEMS** (Asset-Entity-Manifestation-State) | Nostr events defining universal Entities, game-specific Manifestations, mutable State, and optional ownership | Preservation, asset lock-in, interoperability |
+| **AEMS** (Asset-Entity-Manifestation-State) | Nostr events defining universal Entities, game-specific Manifestations, player-owned Assets, and mutable State | Preservation, asset lock-in, interoperability |
 | **RUNS** (Record Update Network Processor) | Execution substrate: uniform Records transformed by stateless Processors wired into explicit Networks | Engine rigidity, mod fragility, long-term maintenance |
 | **WOCS** (Work Order Coordination Settlement) | Coordination primitive: broadcast needs, verify delivery, settle via Lightning—no platform, no escrow, no reputation | Gatekept coordination, siloed communities, single points of failure |
 
@@ -104,10 +104,10 @@ The Authorial Provenance Standard (APS) details this approach—provenance over 
 
 ### AEMS: Durable Entities
 Layered Nostr events make artifacts independent and interpretable.
-- Universal Entity (e.g., "sword that deals damage").
-- Game-specific Manifestation (e.g., +50 attack, fire enchantment).
-- Mutable State (durability, upgrades).
-- Optional signed ownership chain.
+- **Entity** — Universal archetype (e.g., "sword that deals damage").
+- **Manifestation** — Game-specific implementation (e.g., +50 attack, fire enchantment).
+- **Asset** — Player's unique instance of a Manifestation.
+- **State** — Mutable stats of that specific Asset (durability, upgrades).
 
 Items earned in one game persist for import elsewhere.
 
