@@ -80,7 +80,7 @@ This mirrors how Creative Commons works in practice: rarely litigated, yet widel
 
 The protocol doesn't enforce covenants, but markets can emerge to provide verification, reputation, and dispute resolution services:
 
-- **Attribution Verification** — Third parties offer services to prove/disprove authorship claims, compensated via WOCS bounties
+- **Attribution Verification** — Third parties offer services to prove/disprove authorship claims, compensated via WOCS offers
 - **Covenant Compliance Tracking** — Aggregators maintain public records of who honors covenants
 - **Reputation Markets** — Provenance chains become social capital; strong histories attract future commissions
 - **Dispute Mediation** — Voluntary arbitration services for contested attribution
@@ -134,7 +134,7 @@ This is like paying for a theater ticket: you're paying for the *curated experie
 | DGS Tenet | APS Alignment |
 |-----------|---------------|
 | **No Rent-Seeking** | Covenants are purely social signals; no protocol-level fee extraction |
-| **Sats Only** | First-experience payments and reputation bounties settle via Lightning |
+| **Sats Only** | First-experience payments and reputation services settle via Lightning |
 | **Protocol Neutrality** | Works for human authors, AI-assisted creation, collaborative works |
 | **No-Code Rule** | Enforcement/reputation markets are third-party services, not protocol-embedded |
 | **Permissionless** | Anyone can publish; covenants don't prevent use, just signal expectations |

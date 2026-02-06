@@ -80,7 +80,7 @@ Casual play: Someone posts a WOCS offer—"500 sats buy-in for a quick MOBA lobb
 
 Niche play: A small group runs their weird variant weekly. It stays cult forever, like church-league softball.
 
-Pro-layer play: A popular organizer bounties high-uptime servers, anti-cheat Processors, and ranked matchmaking via recurring WOCS offers. Thousands opt in for polished experience and streamed tournaments. Third-party clients emerge with slick UI, discovery feeds, or premium overlays. If the organizer gets extractive, players fork the ruleset or drop to raw pickup lobbies—the foundation guarantees exit.
+Pro-layer play: A popular organizer funds high-uptime servers, anti-cheat Processors, and ranked matchmaking via recurring WOCS offers. Thousands opt in for polished experience and streamed tournaments. Third-party clients emerge with slick UI, discovery feeds, or premium overlays. If the organizer gets extractive, players fork the ruleset or drop to raw pickup lobbies—the foundation guarantees exit.
 
 Value flows horizontally: modders earn directly for new Manifestations, artists for assets, hosts for reliability, streamers for casting. Ecosystems grow around the open ruleset (client apps, analytics tools, "equipment" like custom renderers) without anyone owning the game itself.
 
@@ -125,7 +125,7 @@ A minimal coordination primitive built on Nostr: three events (Offer, Fulfill, A
 - Prove delivery and request payment (Fulfill).
 - Acknowledge completion with payment proof (Ack).
 
-No platform, no mandatory reputation, no built-in escrow—just open signals enabling strangers to coordinate server hosting, anti-cheat bounties, asset creation, tournament pooling, and any other ecosystem service. Communities coordinate at any scale without gatekeepers.
+No platform, no mandatory reputation, no built-in escrow—just open signals enabling strangers to coordinate server hosting, anti-cheat services, asset creation, tournament pooling, and any other ecosystem service. Communities coordinate at any scale without gatekeepers.
 
 ## Technical Foundation
 
