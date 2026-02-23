@@ -1,154 +1,67 @@
 # Decentralized Game Standard
 
-**Protocols for Games That Endure as Open Rulesets, Not Fragile Products — Conceptual Framework, 2026-01-14**
+**Protocols for Games That Endure as Open Rulesets — Conceptual Framework, 2026-01-14**
 
-Physical games have endured for centuries because they are fundamentally open rulesets played with neutral artifacts. Anyone can grab a ball and play soccer in a park—no permission needed from FIFA. Variants emerge freely: pickup games, backyard rules, niche leagues. Professional spectacles (World Cup, Premier League) add polish and scale as voluntary overlays, but they never own the game itself. Equipment makers, coaches, and local organizers build thriving ecosystems around the open core without gatekeeping play.
+📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[RUNS](https://github.com/decentralized-game-standard/runs-standard)** · 📖 **[RUNS Library](https://github.com/decentralized-game-standard/runs-standard-library)** · ⚡ **[WOCS](https://github.com/decentralized-game-standard/wocs-standard)** · 🎭 **[MAPS](https://github.com/decentralized-game-standard/ludic-notation-standard)** · ❓ **[FAQ](https://github.com/decentralized-game-standard/.github/blob/main/profile/FAQ.md)**
 
-Digital games have taken the opposite path: built as proprietary products controlled by publishers who own the "ball," the rules, the field, and the scoreboard. This creates extraordinary short-term experiences but systemic fragility—games shut down, assets vanish, communities fracture, and innovation bottlenecks through gatekeepers.
+A child builds a LEGO castle on the living room floor. Three hundred bricks, eight hours of work, a drawbridge that actually opens. The castle is theirs. LEGO made the bricks, but the castle belongs to the child. If LEGO goes bankrupt tomorrow, the castle still stands on the floor. The child can add to it, take it apart, combine it with any other LEGO set ever manufactured. The bricks have a standard interface — the stud-and-tube coupling — that makes every brick compatible with every other brick across decades of production. No server keeps the castle alive. No subscription maintains it. No terms of service let anyone dissolve it remotely.
 
-The Decentralized Game Standard realigns digital play with its physical roots. It treats genres as eternal, open rulesets rather than disposable products. Persistent artifacts (items, characters) exist independently on Nostr. Composable engines interpret rules flexibly. Coordination flows peer-to-peer with instant settlement. The result: casual "pickup" games happen spontaneously, niche variants thrive without needing mass scale, and ambitious "pro league" experiences can emerge as voluntary services on top—competed against, forked, or ignored if they overreach.
+Now imagine a version of LEGO where the company retains ownership of every brick. The castle exists on LEGO's servers. You can look at it through an app, but you cannot hold it. When LEGO decides the product line is no longer profitable, every castle built from those bricks disappears. Your eight hours of work, the drawbridge mechanism you figured out, the satisfaction of seeing it on your shelf — gone. Not because the castle broke. Because the company that made the bricks decided to stop maintaining the system that let the bricks exist.
 
-This is not utopian purity demanding everything be fully decentralized. It is pragmatic freedom: a neutral, permissionless foundation that enables abundant play, with optional centralized layers for convenience and spectacle.
+That is the current model of digital games.
 
----
+## The Fusion Problem
 
-📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[RUNS](https://github.com/decentralized-game-standard/runs-standard)** · 📖 **[RUNS Library](https://github.com/decentralized-game-standard/runs-standard-library)** · ⚡ **[WOCS](https://github.com/decentralized-game-standard/wocs-standard)** · 🎭 **[Ludic](https://github.com/decentralized-game-standard/ludic-notation-standard)** · ❓ **[FAQ](https://github.com/decentralized-game-standard/.github/blob/main/profile/FAQ.md)**
+In every digital game shipped today, four distinct concerns are welded into a single product: the game's rules, the engine that runs them, the servers that host them, and the platform that distributes them. When any one of these layers fails — the company loses interest, the engine is deprecated, the servers are shut down, the platform delists the title — the entire game dies. Not because the rules stopped being good. Because the rules were inseparable from infrastructure that someone else controlled.
 
----
+This is the structural equivalent of a LEGO set where the bricks, the instructions, the table they sit on, and the store that sold them are all one fused object. Remove the store, and the bricks dissolve.
 
-## The Product Paradigm and Its Failings
+The question is whether the fusion is necessary. In every other medium where humans build things meant to last, the answer has been no.
 
-Digital games became products because abundance was channeled into artificial scarcity. Publishers control servers, asset validity, matchmaking, and monetization—making every experience contingent on their continued interest.
+## The Separation
 
-Real-world evidence shows the cost:
+In the 1880s, every factory in America that needed electric power ran its own generator. Edison's Pearl Street Station powered a few blocks of lower Manhattan through proprietary wiring. Each factory was a self-contained system: its own dynamo, its own wiring, its own voltage, its own maintenance crew. If the factory closed, the power system died with it. Nothing was reusable. Nothing was interchangeable. A motor built for one factory's voltage could not run on another factory's current.
 
-- **Preservation Crisis** — Live-service titles vanish routinely (The Crew delisted in 2024, Knockout City ended 2023, hundreds of others). Player progress and purchases evaporate.
-- **Locked Assets** — Items rarely travel between games without corporate deals. Engine lock-in traps entire projects.
-- **Modding and Community Fragility** — Mods sustain classics like Skyrim, yet monetization efforts repeatedly fail under centralized curation and high rents.
-- **Gatekept Coordination** — Esports scenes die unilaterally. Server hosting relies on unreliable donations. Discovery algorithms bury most creations while extracting 30%+.
+The standardized electrical grid changed the equation by separating power generation from power consumption. Standard voltage. Standard outlets. Standard plugs. Now any appliance could draw power from any outlet. The factory that built your refrigerator could go bankrupt, and the refrigerator still worked. Power generation became competitive — gas, hydro, nuclear, solar — because the interface was shared. Innovation exploded on both sides of the plug because neither side owned the other.
 
-These stem from forced centralization at the foundation. The alternative is not anarchy—it's an open base layer with voluntary centralization where useful.
+DGS performs the same separation for digital games. Four protocols unbundle the four fused layers:
 
-## The Discipline of Protocol Restraint
+**AEMS** (Asset-Entity-Manifestation-State) separates game entities from the games that use them. A sword is a universal concept (Entity), given specific stats by each game (Manifestation), owned by a player's cryptographic key (Asset), with its own history (State). Signed Nostr events on open relays. The way a LEGO brick exists independently of any particular model you build with it.
 
-Long-lived protocols share a pattern: aggressive exclusion. They define minimal coordination primitives and deliberately refuse features that could be layered above.
+**RUNS** (Record Update Network System) separates game logic from the engine that executes it. Data flows through stateless Processors wired into explicit Networks. Swap the renderer. Keep the physics. Replace the input system. The data shapes are standard. The way any appliance can plug into any outlet because the voltage is shared.
 
-| Protocol | What It Does | What It Deliberately Excludes |
-|----------|--------------|-------------------------------|
-| **TCP/IP** | Packet routing | Content, security, identity, application semantics |
-| **SMTP** | Store-and-forward messages | Encryption, spam filtering, read receipts |
-| **Bitcoin** | Timestamped transaction ordering | Smart contracts, identity, privacy, governance |
-| **MIDI** | Note events | Sound synthesis, audio, timing guarantees |
-| **Musical notation** | Pitch and duration | Timbre, dynamics, expression |
+**WOCS** (Work Order Coordination Settlement) separates game coordination from platforms. Three Nostr events and a Lightning payment. Broadcast a need (Offer). A stranger fulfills it with proof (Fulfill). Settle instantly (Ack). Server hosting, anti-cheat, tournaments, mod creation — coordinated without a platform taking a cut. The way independent contractors show up at a job site without a staffing agency.
 
-The end-to-end principle (Saltzer, Reed, Clark 1984) articulates why: *functionality belongs at endpoints, not in the network*. Protocols that try to solve every problem become complex, fragile, and capturable. Protocols that stay minimal become infrastructure—neutral substrates that outlive their creators.
+**MAPS** (Marks, Actions, Patterns, Scores) separates game rules from code. Four primitives — States, Verbs, Arcs, Marks — compose into reusable Patterns and complete Scores. Any engine can read a Score. Any designer can fork it. The way four DNA bases compose into genes that any cell can read and any organism can inherit.
 
-DGS follows this discipline:
+Built on Nostr for resilient data and Lightning for instant settlement. No blockchains, tokens, or new consensus layers.
 
-- **AEMS** defines entity structure, not databases or marketplaces
-- **RUNS** defines execution substrate and data-flow patterns, not specific engines or frameworks
-- **WOCS** defines minimal coordination primitives (offer/fulfill/ack), not escrow, reputation, or payment processing
-- **Ludic Notation** defines interactive grammar, not execution or timing
+## What Play Looks Like
 
-When you ask "why doesn't DGS handle X?"—dispute resolution, content moderation, identity verification, complex governance—the answer is the same answer TCP/IP gives: *because X is not the protocol's job*. Communities, markets, and applications handle X. The protocol is the neutral ground they coordinate on.
+Imagine a MOBA genre where no company owns the ball.
 
-This restraint is not laziness or incompleteness. It is the design philosophy that lets protocols endure for decades while platforms rise and fall.
+A community defines the universal archetypes — heroes, items, creeps, towers — as AEMS Entities on Nostr. Different groups publish their own Manifestations: a "classic balance" pass, a "fast-paced beginner variant," an "underwater twist." The hero archetypes are shared across all of them; the stats and mechanics diverge.
 
-## Core Premise: Genres as Sports, Not Products
+Tuesday night. Someone posts a WOCS Offer: "500 sats buy-in, five-on-five MOBA, classic rules, lobby opens at 9pm." Nine other players see it on Nostr and join through any RUNS-compatible client. A community-hosted server runs the match. Items import automatically from each player's AEMS inventory. No accounts created. No platform logged into. The match happens the way a neighborhood basketball game happens: people showed up at the court.
 
-A battle royale should feel like soccer: core concepts (shrinking zone, looting, last-player-standing) are neutral and persistent. Anyone can host a quick match with friends or strangers. Items earned in one session carry forward. Niche variants (zombie mode, prop hunt) emerge without approval. Massive, polished tournaments with ranked ladders and streaming can exist as opt-in services—funded directly, competed against freely.
+A small group runs a weird variant every Thursday. Underwater MOBA, inverted controls. Five regular players. It stays cult forever, the way a Thursday-night poker game with friends stays cult forever. The costs are negligible because the protocols are lightweight and the server Offer is small.
 
-The standard achieves this by separating durable artifacts from interpretive rules and enabling frictionless coordination:
+Meanwhile, an ambitious organizer sees demand and builds on top. High-uptime servers, contracted anti-cheat, ranked matchmaking, streamed tournaments — all funded through recurring WOCS Offers. Thousands opt in for the polished experience. Third-party clients emerge with premium overlays, analytics, and social features. If the organizer becomes extractive, players drop to raw community lobbies. The foundation guarantees exit because no one owns the bricks.
 
-| Protocol | Core Mechanism | Primary Failures Addressed |
-|----------|----------------|---------------------------|
-| **AEMS** (Asset-Entity-Manifestation-State) | Nostr events defining universal Entities, game-specific Manifestations, player-owned Assets, and mutable State | Preservation, asset lock-in, interoperability |
-| **RUNS** (Record Update Network System) | Execution substrate: uniform Records transformed by stateless Processors wired into explicit Networks | Engine rigidity, mod fragility, long-term maintenance |
-| **WOCS** (Work Order Coordination Settlement) | Coordination primitive: broadcast needs, verify delivery, settle via Lightning—no platform, no escrow, no reputation | Gatekept coordination, siloed communities, single points of failure |
+Value flows to the people creating it. Modders earn for new Manifestations. Artists earn for asset creation. Hosts earn for reliability. Every transaction settles peer-to-peer. No store takes 30%.
 
-Built on mature primitives—Nostr for resilient data, Lightning for instant micropayments—no blockchains, tokens, or new consensus layers.
+## Authored Experiences
 
-## How It Works in Practice
+Genres-as-open-rulesets is the primary design target. But authored experiences — puzzle games where the solution is the treasure, mysteries where a single spoiler is fatal, interactive art where the creator's vision is the medium — also sit on the same foundation.
 
-Imagine "MOBA" as a genre like basketball:
+Attribution is cryptographic and unforgeable. Every creative act is signed. Copying a work is possible; falsely claiming authorship is mathematically prevented. Authors attach use expectations as legible social signals. Communities and reputation markets respect these through transparency, and the protocol enforces nothing beyond the signature. First-experience economics let creators monetize the curated revelation (paying for the journey), with content opening naturally after encounter.
 
-- A community defines universal Entities (heroes, items, creeps) via AEMS.
-- Different groups publish Manifestations: "classic Dota-style," "fast-paced beginner variant," "underwater twist."
-- Players own instances with history and state that persist on Nostr.
+Provenance over property. Covenants without enforcement. Markets for reputation funded via WOCS.
 
-Casual play: Someone posts a WOCS offer—"500 sats buy-in for a quick MOBA lobby tonight, classic rules." Others join via any RUNS-compatible client. A community-hosted server (or P2P mesh) runs the match. Items import automatically. No accounts, no platform—just play.
+## Status
 
-Niche play: A small group runs their weird variant weekly. It stays cult forever, like church-league softball.
+These are conceptual specifications. No reference implementations exist. No production games run on these protocols. The focus is the structural problem at the core of digital games: the fusion of rules, engine, server, and platform into a single killable product. The protocols separate those layers so that games can outlive the companies that built them, the way a LEGO castle outlives the store that sold the bricks.
 
-Pro-layer play: A popular organizer funds high-uptime servers, anti-cheat services, and ranked matchmaking via recurring WOCS offers. Thousands opt in for polished experience and streamed tournaments. Third-party clients emerge with slick UI, discovery feeds, or premium overlays. If the organizer gets extractive, players fork the ruleset or drop to raw pickup lobbies—the foundation guarantees exit.
-
-Value flows horizontally: modders earn directly for new Manifestations, artists for assets, hosts for reliability, streamers for casting. Ecosystems grow around the open ruleset (client apps, analytics tools, "equipment" like custom renderers) without anyone owning the game itself.
-
-Single-player adventures (Zelda-likes) fit too: worlds as shared Entity collections, mods as new Manifestations, execution via community Processors, persistence beyond any one engine.
-
-## Scope: Commons and Authored Experiences
-
-This standard optimizes for games that benefit from longevity and community evolution—like sports or folklore genres. But what of puzzle games where the solution is the treasure? Mystery narratives where a single spoiler destroys the journey? Interactive art where the creator's intent *is* the experience?
-
-These authored experiences fit the same foundation through a philosophy of **abundance through reciprocity** rather than scarcity through enforcement:
-
-- **Unforgeable Attribution** — Every creative act is cryptographically signed. Origin is mathematically provable without courts or takedowns. Copying is fine; *claiming* (fraud about authorship) is impossible.
-- **Voluntary Covenants** — Authors attach use expectations as legible social signals ("attribution required," "commercial license needed"). Communities and reputation markets respect these—not through enforcement, but through transparency.
-- **First-Experience Economics** — Authored works monetize the *curated revelation* (paying for the puzzle-solving journey, not the solution itself). After encounter, content may open naturally.
-
-This rejects the false choice between "fully open commons" and "DRM-protected products." Authors retain attribution and can earn from first experiences. Copiers participate in cultural propagation. Neither requires enforcement mechanisms that contradict the open foundation.
-
-The Authorial Provenance Standard (APS) details this approach—provenance over property, covenants without enforcement, and markets for reputation and verification funded via WOCS.
-
-## The Protocols
-
-### AEMS: Durable Entities
-Layered Nostr events make artifacts independent and interpretable.
-- **Entity** — Universal archetype (e.g., "sword that deals damage").
-- **Manifestation** — Game-specific implementation (e.g., +50 attack, fire enchantment).
-- **Asset** — Player's unique instance of a Manifestation.
-- **State** — Mutable stats of that specific Asset (durability, upgrades).
-
-Items earned in one game persist for import elsewhere.
-
-### RUNS: Composable Engines
-Data-oriented design: everything is Records with Fields, transformed by stateless Processors wired into Networks.
-- Swap renderers, physics, or input without rewriting core.
-- Mods are native Processor additions.
-- Naturally supports parallelism and explicit data flow.
-
-RUNS runtimes reference AEMS Entities for content definitions and apply selected Manifestations. The [RUNS Standard Library](https://github.com/decentralized-game-standard/runs-standard-library) provides semantic agreement on fundamental schemas (`runs:time`, `runs:transform`, `runs:input`).
-
-### WOCS: Permissionless Coordination
-A minimal coordination primitive built on Nostr: three events (Offer, Fulfill, Ack) with Lightning settlement.
-- Broadcast a need with committed settlement amount (Offer).
-- Prove delivery and request payment (Fulfill).
-- Acknowledge completion with payment proof (Ack).
-
-No platform, no mandatory reputation, no built-in escrow—just open signals enabling strangers to coordinate server hosting, anti-cheat services, asset creation, tournament pooling, and any other ecosystem service. Communities coordinate at any scale without gatekeepers.
-
-## Technical Foundation
-
-- **Nostr** — Signed, relay-replicated events for all persistent data.
-- **Lightning** — Near-zero-fee settlement for commitments.
-- Minimal by design: no speculative assets, no consensus overhead.
-
-## Example Emergence
-
-A player discovers a rare shield:
-- Defined universally via AEMS Entity.
-- Manifested differently across games.
-- State tracks battle history.
-- A modder (funded via WOCS) publishes a new Manifestation with visual flair.
-- Ownership transfers permissionlessly.
-- One hosted game ends—the shield lives on for the next pickup match or pro tournament.
-
-## Status and Scope
-
-These are conceptual specifications—minimal, open, and language-agnostic—inviting experimentation. No reference implementations yet exist. The focus is the hardest problems: preservation, permissionless play, and open ecosystems. Massive synchronous experiences may always involve voluntary centralized layers; the standard guarantees they remain optional.
-
-This is an invitation to build games that compound cultural value across decades, like chess or soccer, rather than resetting with corporate cycles.
-
-Experiment. Host a pickup game. Define an Entity. Watch ecosystems emerge.
+Massive synchronous experiences may always involve voluntary centralized layers. The protocols guarantee those layers remain optional and replaceable.
 
 **MIT License** — Free to implement, adapt, share.
