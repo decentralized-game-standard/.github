@@ -1,33 +1,54 @@
 # Enduring Game Standard
 
-**Protocols for Games That Endure as Open Rulesets, Not Fragile Products — Conceptual Framework, 2026-01-14**
+**Protocols for Games That Endure — Patient Capital, Durable Substrate, Cumulative Craft**
 
-Physical games have endured for centuries because they are fundamentally open rulesets played with neutral artifacts. Anyone can grab a ball and play soccer in a park—no permission needed from FIFA. Variants emerge freely: pickup games, backyard rules, niche leagues. Professional spectacles (World Cup, Premier League) add polish and scale as voluntary overlays, but they never own the game itself. Equipment makers, coaches, and local organizers build thriving ecosystems around the open core without gatekeeping play.
+The games that endured five millennia — chess, Go, the Olympic Games — all shared three structural conditions: patient capital to fund long-term stewardship, a durable substrate that persisted independently of any single owner, and cumulative craft that transmitted knowledge across generations. Physical games possess these conditions naturally. Anyone can grab a ball and play soccer in a park without permission from FIFA. Variants emerge freely: pickup games, backyard rules, niche leagues. Professional spectacles add polish and scale as voluntary overlays, but they never own the game itself.
 
-Digital games have taken the opposite path: built as proprietary products controlled by publishers who own the "ball," the rules, the field, and the scoreboard. This creates extraordinary short-term experiences but systemic fragility—games shut down, assets vanish, communities fracture, and innovation bottlenecks through gatekeepers.
+Digital games haven't had these properties — yet. Built on proprietary infrastructure, they tie every experience to a single company's continued interest. Games shut down, assets vanish, communities fracture, and accumulated craft scatters.
 
-The Enduring Game Standard realigns digital play with its physical roots. It treats genres as eternal, open rulesets rather than disposable products. Persistent artifacts (items, characters) exist independently on Nostr. Composable engines interpret rules flexibly. Coordination flows peer-to-peer with instant settlement. The result: casual "pickup" games happen spontaneously, niche variants thrive without needing mass scale, and ambitious "pro league" experiences can emerge as voluntary services on top—competed against, forked, or ignored if they overreach.
+The Enduring Game Standard restores all three conditions to digital play. It treats genres as open rulesets rather than disposable products. Persistent artifacts exist independently on Nostr, where they are discoverable and inheritable without any single party's permission. Composable execution engines interpret rules flexibly. Coordination flows peer-to-peer with instant settlement. Notation transmits design knowledge so craft compounds across generations.
 
-This is not utopian purity demanding everything be fully decentralized. It is pragmatic freedom: a neutral, permissionless foundation that enables abundant play, with optional centralized layers for convenience and spectacle.
-
----
-
-📦 **[AEMS](https://github.com/enduring-game-standard/aems-schema)** · 🔧 **[RUNS](https://github.com/enduring-game-standard/runs-spec)** · 📖 **[RUNS Library](https://github.com/enduring-game-standard/runs-library)** · ⚡ **[WOCS](https://github.com/enduring-game-standard/wocs-protocol)** · 🎭 **[MAPS](https://github.com/enduring-game-standard/maps-notation)** · ❓ **[FAQ](https://github.com/enduring-game-standard/.github/blob/main/profile/FAQ.md)**
+Pragmatic freedom: a neutral, permissionless foundation enabling abundant play, with optional centralized layers for convenience and spectacle.
 
 ---
 
-## The Product Paradigm and Its Failings
+📦 **[AEMS](https://github.com/enduring-game-standard/aems-schema)** · 🎯 **[AEMS Conventions](https://github.com/enduring-game-standard/aems-conventions)** · 🔧 **[RUNS](https://github.com/enduring-game-standard/runs-spec)** · 📖 **[RUNS Library](https://github.com/enduring-game-standard/runs-library)** · ⚡ **[WOCS](https://github.com/enduring-game-standard/wocs-protocol)** · 🎭 **[MAPS](https://github.com/enduring-game-standard/maps-notation)** · 🎶 **[MAPS Library](https://github.com/enduring-game-standard/maps-library)** · 🏫 **[Austin School](https://github.com/enduring-game-standard/austin-school)** · ❓ **[FAQ](https://github.com/enduring-game-standard/.github/blob/main/profile/FAQ.md)**
 
-Digital games became products because abundance was channeled into artificial scarcity. Publishers control servers, asset validity, matchmaking, and monetization—making every experience contingent on their continued interest.
+---
 
-Real-world evidence shows the cost:
+## What Digital Games Lost
 
-- **Preservation Crisis** — Live-service titles vanish routinely (The Crew delisted in 2024, Knockout City ended 2023, hundreds of others). Player progress and purchases evaporate.
-- **Locked Assets** — Items rarely travel between games without corporate deals. Engine lock-in traps entire projects.
-- **Modding and Community Fragility** — Mods sustain classics like Skyrim, yet monetization efforts repeatedly fail under centralized curation and high rents.
-- **Gatekept Coordination** — Esports scenes die unilaterally. Server hosting relies on unreliable donations. Discovery algorithms bury most creations while extracting 30%+.
+Physical games are naturally durable. Digital games have been built on proprietary infrastructure — servers, asset validity, matchmaking, monetization all contingent on a single company's continued interest. The structural gap shows up as concrete costs:
 
-These stem from forced centralization at the foundation. The alternative is not anarchy—it's an open base layer with voluntary centralization where useful.
+- **Games should survive their creators** — yet live-service titles vanish routinely (The Crew delisted in 2024, Knockout City ended 2023, hundreds of others). Player progress and purchases evaporate.
+- **Player artifacts should persist independently** — yet items rarely travel between games without corporate deals. Engine lock-in traps entire projects.
+- **Modification should be native** — yet mods sustain classics like Skyrim while monetization efforts repeatedly fail under centralized curation and high rents.
+- **Coordination should be permissionless** — yet esports scenes die unilaterally. Server hosting relies on unreliable donations. Discovery algorithms bury most creations while extracting 30%+.
+
+These are downstream effects of building on depreciating foundations — where the financial pressure to extract value faster than it degrades makes long-term stewardship irrational. An open base layer with voluntary centralization closes the gap.
+
+## Patient Capital
+
+Open-source game engines, crowdfunding, cooperative studios, indie movements — each solved part of the problem. Open-source engines made tools accessible. Crowdfunding gave creators independence from publishers. Cooperatives aligned incentives. What none of them could reach was the structural cause underneath.
+
+The structural cause is the relationship between money and time. When the currency a studio holds loses purchasing power year after year, the rational strategy is extraction: ship fast, monetize aggressively, move on. Long-term stewardship becomes irrational under depreciating money, regardless of the developers' intentions. This is why venture-funded studios optimize for exit, why live-service games maximize engagement over craft, and why accumulated design knowledge scatters when studios close.
+
+Patient capital reverses this incentive. When money does not depreciate, holding it is costless and deploying it carries genuine opportunity cost. The rational strategy shifts from extraction to stewardship: fund carefully, build durably, maintain indefinitely. Sound money makes open infrastructure economically rational because the capital funding its development does not erode while the protocols mature.
+
+The Enduring Game Standard assumes this condition. Its protocols become rational investments when the capital behind them holds value across decades.
+
+## Core Premise: Genres as Sports, Not Products
+
+A battle royale should function like soccer: core concepts (shrinking zone, looting, last-player-standing) are neutral and persistent. Anyone can host a quick match with friends or strangers. Items earned in one session carry forward. Niche variants (zombie mode, prop hunt) emerge without approval. Massive, polished tournaments with ranked ladders and streaming can exist as opt-in services — funded directly, competed against freely.
+
+The standard achieves this by separating durable artifacts from interpretive rules and enabling frictionless coordination:
+
+| Protocol | Core Mechanism | Primary Failures Addressed |
+|----------|----------------|---------------------------|
+| **AEMS** (Asset-Entity-Manifestation-State) | Nostr events defining universal Entities, game-specific Manifestations, player-owned Assets, and mutable State | Preservation, asset lock-in, interoperability |
+| **RUNS** (Record Update Network System) | Execution substrate: uniform Records transformed by stateless Processors wired into explicit Networks | Engine rigidity, mod fragility, long-term maintenance |
+| **WOCS** (Work Order Coordination Settlement) | Coordination primitive: broadcast needs, verify delivery, settle via Lightning — no platform, no escrow, no reputation | Gatekept coordination, siloed communities, single points of failure |
+| **MAPS** (Notation for interactive grammar) | Four primitives (State, Verb, Arc, Mark) describing game mechanics as readable, composable scores | Knowledge loss, design isolation, inability to study or build on prior work |
 
 ## The Discipline of Protocol Restraint
 
@@ -41,80 +62,34 @@ Long-lived protocols share a pattern: aggressive exclusion. They define minimal 
 | **MIDI** | Note events | Sound synthesis, audio, timing guarantees |
 | **Musical notation** | Pitch and duration | Timbre, dynamics, expression |
 
-The end-to-end principle (Saltzer, Reed, Clark 1984) articulates why: *functionality belongs at endpoints, not in the network*. Protocols that try to solve every problem become complex, fragile, and capturable. Protocols that stay minimal become infrastructure—neutral substrates that outlive their creators.
+The end-to-end principle (Saltzer, Reed, Clark 1984) articulates why: *functionality belongs at endpoints, not in the network*. Protocols that try to solve every problem become complex, fragile, and capturable. Protocols that stay minimal become infrastructure — neutral substrates that outlive their creators.
 
 EGS follows this discipline:
 
 - **AEMS** defines entity structure, not databases or marketplaces
 - **RUNS** defines execution substrate and data-flow patterns, not specific engines or frameworks
 - **WOCS** defines minimal coordination primitives (offer/fulfill/ack), not escrow, reputation, or payment processing
-- **MAPS Notation** defines interactive grammar, not execution or timing
+- **MAPS** defines interactive grammar, not execution or timing
 
-When you ask "why doesn't EGS handle X?"—dispute resolution, content moderation, identity verification, complex governance—the answer is the same answer TCP/IP gives: *because X is not the protocol's job*. Communities, markets, and applications handle X. The protocol is the neutral ground they coordinate on.
+When you ask "why does EGS not handle X?" — dispute resolution, content moderation, identity verification, complex governance — the answer is the same answer TCP/IP gives: *because X is not the protocol's job*. Communities, markets, and applications handle X. The protocol is the neutral ground they coordinate on.
 
 This restraint is not laziness or incompleteness. It is the design philosophy that lets protocols endure for decades while platforms rise and fall.
-
-## Core Premise: Genres as Sports, Not Products
-
-A battle royale should feel like soccer: core concepts (shrinking zone, looting, last-player-standing) are neutral and persistent. Anyone can host a quick match with friends or strangers. Items earned in one session carry forward. Niche variants (zombie mode, prop hunt) emerge without approval. Massive, polished tournaments with ranked ladders and streaming can exist as opt-in services—funded directly, competed against freely.
-
-The standard achieves this by separating durable artifacts from interpretive rules and enabling frictionless coordination:
-
-| Protocol | Core Mechanism | Primary Failures Addressed |
-|----------|----------------|---------------------------|
-| **AEMS** (Asset-Entity-Manifestation-State) | Nostr events defining universal Entities, game-specific Manifestations, player-owned Assets, and mutable State | Preservation, asset lock-in, interoperability |
-| **RUNS** (Record Update Network System) | Execution substrate: uniform Records transformed by stateless Processors wired into explicit Networks | Engine rigidity, mod fragility, long-term maintenance |
-| **WOCS** (Work Order Coordination Settlement) | Coordination primitive: broadcast needs, verify delivery, settle via Lightning—no platform, no escrow, no reputation | Gatekept coordination, siloed communities, single points of failure |
-
-Built on mature primitives—Nostr for resilient data, Lightning for instant micropayments—no blockchains, tokens, or new consensus layers.
-
-## How It Works in Practice
-
-Imagine "MOBA" as a genre like basketball:
-
-- A community defines universal Entities (heroes, items, creeps) via AEMS.
-- Different groups publish Manifestations: "classic Dota-style," "fast-paced beginner variant," "underwater twist."
-- Players own instances with history and state that persist on Nostr.
-
-Casual play: Someone posts a WOCS offer—"500 sats buy-in for a quick MOBA lobby tonight, classic rules." Others join via any RUNS-compatible client. A community-hosted server (or P2P mesh) runs the match. Items import automatically. No accounts, no platform—just play.
-
-Niche play: A small group runs their weird variant weekly. It stays cult forever, like church-league softball.
-
-Pro-layer play: A popular organizer funds high-uptime servers, anti-cheat services, and ranked matchmaking via recurring WOCS offers. Thousands opt in for polished experience and streamed tournaments. Third-party clients emerge with slick UI, discovery feeds, or premium overlays. If the organizer gets extractive, players fork the ruleset or drop to raw pickup lobbies—the foundation guarantees exit.
-
-Value flows horizontally: modders earn directly for new Manifestations, artists for assets, hosts for reliability, streamers for casting. Ecosystems grow around the open ruleset (client apps, analytics tools, "equipment" like custom renderers) without anyone owning the game itself.
-
-Single-player adventures (Zelda-likes) fit too: worlds as shared Entity collections, mods as new Manifestations, execution via community Processors, persistence beyond any one engine.
-
-## Scope: Commons and Authored Experiences
-
-This standard optimizes for games that benefit from longevity and community evolution—like sports or folklore genres. But what of puzzle games where the solution is the treasure? Mystery narratives where a single spoiler destroys the journey? Interactive art where the creator's intent *is* the experience?
-
-These authored experiences fit the same foundation through a philosophy of **abundance through reciprocity** rather than scarcity through enforcement:
-
-- **Unforgeable Attribution** — Every creative act is cryptographically signed. Origin is mathematically provable without courts or takedowns. Copying is fine; *claiming* (fraud about authorship) is impossible.
-- **Voluntary Covenants** — Authors attach use expectations as legible social signals ("attribution required," "commercial license needed"). Communities and reputation markets respect these—not through enforcement, but through transparency.
-- **First-Experience Economics** — Authored works monetize the *curated revelation* (paying for the puzzle-solving journey, not the solution itself). After encounter, content may open naturally.
-
-This rejects the false choice between "fully open commons" and "DRM-protected products." Authors retain attribution and can earn from first experiences. Copiers participate in cultural propagation. Neither requires enforcement mechanisms that contradict the open foundation.
-
-The Authorial Provenance Standard (APS) details this approach—provenance over property, covenants without enforcement, and markets for reputation and verification funded via WOCS.
 
 ## The Protocols
 
 ### AEMS: Durable Entities
-Layered Nostr events make artifacts independent and interpretable.
-- **Entity** — Universal archetype (e.g., "sword that deals damage").
+Layered Nostr events make game artifacts independent and interpretable across any game that reads them.
+- **Entity** — Universal archetype (e.g., "sword that deals damage"), discoverable on the open commons.
 - **Manifestation** — Game-specific implementation (e.g., +50 attack, fire enchantment).
 - **Asset** — Player's unique instance of a Manifestation.
 - **State** — Mutable stats of that specific Asset (durability, upgrades).
 
-Items earned in one game persist for import elsewhere.
+Items earned in one game persist for import elsewhere because they exist on Nostr, not on any single game's servers.
 
 ### RUNS: Composable Engines
 Data-oriented design: everything is Records with Fields, transformed by stateless Processors wired into Networks.
-- Swap renderers, physics, or input without rewriting core.
-- Mods are native Processor additions.
+- Swap renderers, physics, or input without rewriting core logic.
+- Mods are native Processor additions, not fragile hooks into proprietary engines.
 - Naturally supports parallelism and explicit data flow.
 
 RUNS runtimes reference AEMS Entities for content definitions and apply selected Manifestations. The [RUNS Library](https://github.com/enduring-game-standard/runs-library) provides semantic agreement on fundamental schemas (`runs:time`, `runs:transform`, `runs:input`).
@@ -125,30 +100,67 @@ A minimal coordination primitive built on Nostr: three events (Offer, Fulfill, A
 - Prove delivery and request payment (Fulfill).
 - Acknowledge completion with payment proof (Ack).
 
-No platform, no mandatory reputation, no built-in escrow—just open signals enabling strangers to coordinate server hosting, anti-cheat services, asset creation, tournament pooling, and any other ecosystem service. Communities coordinate at any scale without gatekeepers.
+Open signals enabling strangers to coordinate server hosting, anti-cheat services, asset creation, tournament pooling, and any other ecosystem service — directly, with instant settlement.
 
-## Technical Foundation
+### MAPS: Notation for Interactive Grammar
+A neutral, implementation-agnostic system for describing game mechanics as readable, composable scores.
+- **State** — Named variables that change during play.
+- **Verb** — Transformations: things that happen to States.
+- **Arc** — Conditional transitions linking States through Verbs.
+- **Mark** — Annotations connecting mechanical structures to design intent.
 
-- **Nostr** — Signed, relay-replicated events for all persistent data.
-- **Lightning** — Near-zero-fee settlement for commitments.
-- Minimal by design: no speculative assets, no consensus overhead.
+MAPS integrates directly with the composable infrastructure: States become RUNS Records, Verbs become Processors, Arcs become Networks. A designer who sketches a combat system in notation is writing the skeleton that the execution layer reads.
 
-## Example Emergence
+## Cumulative Craft
 
-A player discovers a rare shield:
-- Defined universally via AEMS Entity.
-- Manifested differently across games.
-- State tracks battle history.
-- A modder (funded via WOCS) publishes a new Manifestation with visual flair.
-- Ownership transfers permissionlessly.
-- One hosted game ends—the shield lives on for the next pickup match or pro tournament.
+Durable substrate preserves games. Patient capital funds their development. But neither explains how the *knowledge of how to make games well* survives across generations. Physical game traditions solved this through apprenticeship and notation — chess theory accumulated in books, musical craft compounded through scores that any trained musician could read.
 
-## Status and Scope
+MAPS Notation provides this transmission layer for interactive design. When mechanics are written as readable scores rather than buried in proprietary code, designers can study, fork, and extend each other's work. The [MAPS Library](https://github.com/enduring-game-standard/maps-library) establishes semantic agreement on fundamental patterns — resource acquisition, locked transitions, basic exchanges — so common structures are composable rather than reinvented.
 
-These are conceptual specifications—minimal, open, and language-agnostic—inviting experimentation. No reference implementations yet exist. The focus is the hardest problems: preservation, permissionless play, and open ecosystems. Massive synchronous experiences may always involve voluntary centralized layers; the standard guarantees they remain optional.
+The [Austin School](https://github.com/enduring-game-standard/austin-school) complements notation with institutional memory: an open-source commons for game design knowledge that combines curated resources, community practice, and apprenticeship. Together, notation and institution provide the cumulative-craft pillar — the condition that lets game design compound across decades the way architectural, musical, and mathematical knowledge has compounded across centuries.
 
-This is an invitation to build games that compound cultural value across decades, like chess or soccer, rather than resetting with corporate cycles.
+## Why Nostr
 
-Experiment. Host a pickup game. Define an Entity. Watch ecosystems emerge.
+Every protocol in the standard publishes its artifacts as Nostr events — signed, relay-replicated, and discoverable without any single party's permission. This is the structural requirement for cumulative craft.
+
+Entities, execution records, coordination offers, and notation scores must persist on an open commons if designers and communities are to discover, inherit, and remix each other's work across generations. Nostr provides exactly the properties the standard requires: cryptographic provenance (every event is signed by its creator), relay-based persistence (content survives on any relay that stores it), and permissionless discoverability (anyone can find and build on published work). Where a centralized database introduces a single point of failure and a blockchain introduces consensus overhead, Nostr provides a neutral commons with zero coordination cost.
+
+Lightning provides near-zero-fee settlement for WOCS coordination — instant finality without tokens, without intermediaries, and without the consensus overhead of on-chain transactions.
+
+## How It Works in Practice
+
+Imagine "MOBA" as a genre like basketball:
+
+- A community defines universal Entities (heroes, items, creeps) via AEMS. Each Entity is a signed Nostr event, discoverable by any client.
+- Different groups publish Manifestations: "classic Dota-style," "fast-paced beginner variant," "underwater twist." Each references the same Entities but interprets them differently.
+- Players own Assets — instances with history and state that persist on Nostr.
+
+Casual play: Someone posts a WOCS Offer — "500 sats for a quick MOBA lobby tonight, classic rules." Others accept via any RUNS-compatible client. A community-hosted server runs the match. Items import automatically. Accounts and platforms are optional.
+
+Niche play: A small group runs their own variant weekly. It stays niche indefinitely — a standing game among friends, sustained without scale.
+
+Pro-layer play: A popular organizer funds high-uptime servers, anti-cheat services, and ranked matchmaking via recurring WOCS Offers. Thousands opt in for the polished experience. Third-party clients emerge with discovery feeds, analytics, or premium overlays. If the organizer gets extractive, players fork the ruleset or drop to raw pickup lobbies. The open foundation guarantees exit.
+
+Value flows horizontally: modders earn directly for new Manifestations, artists for assets, hosts for reliability, streamers for casting. Ecosystems grow around the open ruleset without anyone owning the game itself.
+
+## Scope: Commons and Authored Experiences
+
+This standard optimizes for games that benefit from longevity and community evolution — genres that function like sports or folklore. But what of puzzle games where the solution is the treasure? Mystery narratives where a single spoiler destroys the journey? Interactive art where the creator's intent *is* the experience?
+
+These authored experiences fit the same foundation through a philosophy of **abundance through reciprocity** rather than scarcity through enforcement:
+
+- **Unforgeable Attribution** — Every creative act is cryptographically signed. Origin is mathematically provable without courts or takedowns. Copying is fine; *claiming* (fraud about authorship) is impossible.
+- **Voluntary Covenants** — Authors attach use expectations as legible social signals ("attribution required," "commercial license needed"). Communities and reputation markets respect these through transparency, not enforcement.
+- **First-Experience Economics** — Authored works monetize the *curated revelation* (paying for the puzzle-solving journey, not the solution itself). After encounter, content may open naturally.
+
+Attribution and openness reinforce each other. Authors retain provenance and earn from first experiences. Copiers participate in cultural propagation. Both share the same open foundation.
+
+The [Authorial Provenance Standard (APS)](https://github.com/enduring-game-standard/.github/blob/main/profile/APS.md) details this approach — provenance over property, covenants without enforcement, and markets for reputation and verification funded via WOCS.
+
+## Status
+
+These are conceptual specifications — minimal, open, and language-agnostic — inviting experimentation. No reference implementations yet exist. The focus is the hardest problems: preservation, permissionless play, and open ecosystems. Massive synchronous experiences may always involve voluntary centralized layers; the standard ensures they remain optional.
+
+This is an invitation to build games that endure — on substrate open enough to outlast the people who built them.
 
 **MIT License** — Free to implement, adapt, share.
