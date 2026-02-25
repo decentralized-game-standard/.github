@@ -1,4 +1,4 @@
-# Decentralized Game Standard
+# Enduring Game Standard
 
 **Protocols for Games That Endure as Open Rulesets, Not Fragile Products — Conceptual Framework, 2026-01-14**
 
@@ -6,13 +6,13 @@ Physical games have endured for centuries because they are fundamentally open ru
 
 Digital games have taken the opposite path: built as proprietary products controlled by publishers who own the "ball," the rules, the field, and the scoreboard. This creates extraordinary short-term experiences but systemic fragility—games shut down, assets vanish, communities fracture, and innovation bottlenecks through gatekeepers.
 
-The Decentralized Game Standard realigns digital play with its physical roots. It treats genres as eternal, open rulesets rather than disposable products. Persistent artifacts (items, characters) exist independently on Nostr. Composable engines interpret rules flexibly. Coordination flows peer-to-peer with instant settlement. The result: casual "pickup" games happen spontaneously, niche variants thrive without needing mass scale, and ambitious "pro league" experiences can emerge as voluntary services on top—competed against, forked, or ignored if they overreach.
+The Enduring Game Standard realigns digital play with its physical roots. It treats genres as eternal, open rulesets rather than disposable products. Persistent artifacts (items, characters) exist independently on Nostr. Composable engines interpret rules flexibly. Coordination flows peer-to-peer with instant settlement. The result: casual "pickup" games happen spontaneously, niche variants thrive without needing mass scale, and ambitious "pro league" experiences can emerge as voluntary services on top—competed against, forked, or ignored if they overreach.
 
 This is not utopian purity demanding everything be fully decentralized. It is pragmatic freedom: a neutral, permissionless foundation that enables abundant play, with optional centralized layers for convenience and spectacle.
 
 ---
 
-📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[RUNS](https://github.com/decentralized-game-standard/runs-standard)** · 📖 **[RUNS Library](https://github.com/decentralized-game-standard/runs-standard-library)** · ⚡ **[WOCS](https://github.com/decentralized-game-standard/wocs-standard)** · 🎭 **[Ludic](https://github.com/decentralized-game-standard/ludic-notation-standard)** · ❓ **[FAQ](https://github.com/decentralized-game-standard/.github/blob/main/profile/FAQ.md)**
+📦 **[AEMS](https://github.com/enduring-game-standard/aems-schema)** · 🔧 **[RUNS](https://github.com/enduring-game-standard/runs-spec)** · 📖 **[RUNS Library](https://github.com/enduring-game-standard/runs-library)** · ⚡ **[WOCS](https://github.com/enduring-game-standard/wocs-protocol)** · 🎭 **[MAPS](https://github.com/enduring-game-standard/maps-notation)** · ❓ **[FAQ](https://github.com/enduring-game-standard/.github/blob/main/profile/FAQ.md)**
 
 ---
 
@@ -43,14 +43,14 @@ Long-lived protocols share a pattern: aggressive exclusion. They define minimal 
 
 The end-to-end principle (Saltzer, Reed, Clark 1984) articulates why: *functionality belongs at endpoints, not in the network*. Protocols that try to solve every problem become complex, fragile, and capturable. Protocols that stay minimal become infrastructure—neutral substrates that outlive their creators.
 
-DGS follows this discipline:
+EGS follows this discipline:
 
 - **AEMS** defines entity structure, not databases or marketplaces
 - **RUNS** defines execution substrate and data-flow patterns, not specific engines or frameworks
 - **WOCS** defines minimal coordination primitives (offer/fulfill/ack), not escrow, reputation, or payment processing
-- **Ludic Notation** defines interactive grammar, not execution or timing
+- **MAPS Notation** defines interactive grammar, not execution or timing
 
-When you ask "why doesn't DGS handle X?"—dispute resolution, content moderation, identity verification, complex governance—the answer is the same answer TCP/IP gives: *because X is not the protocol's job*. Communities, markets, and applications handle X. The protocol is the neutral ground they coordinate on.
+When you ask "why doesn't EGS handle X?"—dispute resolution, content moderation, identity verification, complex governance—the answer is the same answer TCP/IP gives: *because X is not the protocol's job*. Communities, markets, and applications handle X. The protocol is the neutral ground they coordinate on.
 
 This restraint is not laziness or incompleteness. It is the design philosophy that lets protocols endure for decades while platforms rise and fall.
 
@@ -117,7 +117,7 @@ Data-oriented design: everything is Records with Fields, transformed by stateles
 - Mods are native Processor additions.
 - Naturally supports parallelism and explicit data flow.
 
-RUNS runtimes reference AEMS Entities for content definitions and apply selected Manifestations. The [RUNS Standard Library](https://github.com/decentralized-game-standard/runs-standard-library) provides semantic agreement on fundamental schemas (`runs:time`, `runs:transform`, `runs:input`).
+RUNS runtimes reference AEMS Entities for content definitions and apply selected Manifestations. The [RUNS Library](https://github.com/enduring-game-standard/runs-library) provides semantic agreement on fundamental schemas (`runs:time`, `runs:transform`, `runs:input`).
 
 ### WOCS: Permissionless Coordination
 A minimal coordination primitive built on Nostr: three events (Offer, Fulfill, Ack) with Lightning settlement.

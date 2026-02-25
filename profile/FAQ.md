@@ -1,12 +1,12 @@
-# Frequently Asked Questions: Decentralized Game Standard
+# Frequently Asked Questions: Enduring Game Standard
 
-🏠 **[Overview](https://github.com/decentralized-game-standard)** · 📦 **[AEMS](https://github.com/decentralized-game-standard/aems-standard)** · 🔧 **[RUNS](https://github.com/decentralized-game-standard/runs-standard)** · ⚡ **[WOCS](https://github.com/decentralized-game-standard/wocs-standard)**
+🏠 **[Overview](https://github.com/enduring-game-standard)** · 📦 **[AEMS](https://github.com/enduring-game-standard/aems-schema)** · 🔧 **[RUNS](https://github.com/enduring-game-standard/runs-spec)** · ⚡ **[WOCS](https://github.com/enduring-game-standard/wocs-protocol)** · 🎭 **[MAPS](https://github.com/enduring-game-standard/maps-notation)**
 
 ---
 
 ## Overview
 
-**What is the Decentralized Game Standard?**  
+**What is the Enduring Game Standard?**  
 A set of three minimal, interlocking protocols—AEMS (Asset-Entity-Manifestation-State), RUNS (Record Update Network Processor), and WOCS (Work Order Coordination Settlement)—designed to make digital games more resilient, interoperable, and community-driven. Built entirely on existing open infrastructure (Nostr for persistent data and Lightning for settlement), they separate durable game objects from interpretive rules, enable modular engine construction, and facilitate direct peer-to-peer coordination. The aim is to create games that can persist for generations, much like chess or go, without depending on any single company or server.
 
 **Why does this matter?**  

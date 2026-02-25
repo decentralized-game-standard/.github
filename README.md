@@ -1,4 +1,4 @@
-# Internal: Decentralized Game Standard Protocol Team
+# Internal: Enduring Game Standard Protocol Team
 
 > [!CAUTION]
 > **READ BEFORE CONTRIBUTING**
@@ -23,9 +23,10 @@ We generally don't publish these rules widely to avoid bikeshedding, but they ar
 ## Repository Structure
 
 *   `/profile`: The public face. High-level manifesto.
-*   `/aems-standard`: The entity standard (AEMS).
-*   `/runs-standard`: The engine standard (RUNS).
-*   `/wocs-standard`: The coordination standard (WOCS).
+*   `/aems-schema`: The entity schema (AEMS).
+*   `/runs-spec`: The engine specification (RUNS).
+*   `/wocs-protocol`: The coordination protocol (WOCS).
+*   `/maps-notation`: The mechanics notation (MAPS).
 
 ## Emergency Contacts
 

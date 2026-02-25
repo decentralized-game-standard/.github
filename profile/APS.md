@@ -4,9 +4,9 @@
 
 ---
 
-The Decentralized Game Standard naturally serves games that resemble sports or folklore—commons by nature, where openness fuels longevity. But what of authored experiences? Puzzle games where the solution is the treasure. Mystery narratives where a single spoiler destroys the journey. Interactive art where the creator's intent is the experience itself.
+The Enduring Game Standard naturally serves games that resemble sports or folklore—commons by nature, where openness fuels longevity. But what of authored experiences? Puzzle games where the solution is the treasure. Mystery narratives where a single spoiler destroys the journey. Interactive art where the creator's intent is the experience itself.
 
-These creations sit uneasily in purely open systems. The impulse is to reach for protection: DRM, enforcement, access control. Yet that path contradicts the abundance philosophy underlying everything else in DGS. It creates adversaries where there should be collaborators. It introduces friction for honest participants while failing to stop determined extractors.
+These creations sit uneasily in purely open systems. The impulse is to reach for protection: DRM, enforcement, access control. Yet that path contradicts the abundance philosophy underlying everything else in EGS. It creates adversaries where there should be collaborators. It introduces friction for honest participants while failing to stop determined extractors.
 
 There is another way. Instead of scarcity through enforcement, we propose **abundance through reciprocity**. Instead of treating information as property to be locked, we treat provenance as the primitive and attribution as the moral claim.
 
@@ -129,9 +129,9 @@ This is like paying for a theater ticket: you're paying for the *curated experie
 
 **Implementation Note**: Sealed content mechanics are conceptual. Clients may implement any approach to revelation sequencing—honor-system based, payment-gated, or hybrid. The standard specifies *what* (sealed markers, revelation order) not *how* (enforcement mechanism).
 
-## Alignment with DGS Philosophy
+## Alignment with EGS Philosophy
 
-| DGS Tenet | APS Alignment |
+| EGS Tenet | APS Alignment |
 |-----------|---------------|
 | **No Rent-Seeking** | Covenants are purely social signals; no protocol-level fee extraction |
 | **Sats Only** | First-experience payments and reputation services settle via Lightning |
@@ -175,7 +175,7 @@ Abundance through reciprocity. Provenance over property. Attribution without enf
 
 ## Status and Invitation
 
-This is a conceptual proposal for how authored experiences fit within the DGS philosophy. It invites experimentation:
+This is a conceptual proposal for how authored experiences fit within the EGS philosophy. It invites experimentation:
 
 - Publish an Entity with covenant tags
 - Build a simple reputation aggregator service
