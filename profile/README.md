@@ -12,7 +12,7 @@ Pragmatic freedom: a neutral, permissionless foundation enabling abundant play, 
 
 ---
 
-📦 **[AEMS](https://github.com/enduring-game-standard/aems-schema)** · 🎯 **[AEMS Conventions](https://github.com/enduring-game-standard/aems-conventions)** · 🔧 **[RUNS](https://github.com/enduring-game-standard/runs-spec)** · 📖 **[RUNS Library](https://github.com/enduring-game-standard/runs-library)** · ⚡ **[WOCS](https://github.com/enduring-game-standard/wocs-protocol)** · 🎭 **[MAPS](https://github.com/enduring-game-standard/maps-notation)** · 🎶 **[MAPS Library](https://github.com/enduring-game-standard/maps-library)** · 🏫 **[Austin School](https://github.com/enduring-game-standard/austin-school)** · ❓ **[FAQ](https://github.com/enduring-game-standard/.github/blob/main/profile/FAQ.md)**
+📦 **[AEMS](https://github.com/enduring-game-standard/aems-schema)** · 🎯 **[AEMS Conventions](https://github.com/enduring-game-standard/aems-conventions)** · 🔧 **[RUNS](https://github.com/enduring-game-standard/runs-spec)** · 📖 **[RUNS Library](https://github.com/enduring-game-standard/runs-library)** · ⚡ **[WOCS](https://github.com/enduring-game-standard/wocs-protocol)** · 🎼 **[MAPS](https://github.com/enduring-game-standard/maps-notation)** · 🎶 **[MAPS Library](https://github.com/enduring-game-standard/maps-library)** · 🏫 **[Austin School](https://github.com/enduring-game-standard/austin-school)** · ❓ **[FAQ](https://github.com/enduring-game-standard/.github/blob/main/profile/FAQ.md)**
 
 ---
 
@@ -119,13 +119,23 @@ MAPS Notation provides this transmission layer for interactive design. When mech
 
 The [Austin School](https://github.com/enduring-game-standard/austin-school) complements notation with institutional memory: an open-source commons for game design knowledge that combines curated resources, community practice, and apprenticeship. Together, notation and institution provide the cumulative-craft pillar — the condition that lets game design compound across decades the way architectural, musical, and mathematical knowledge has compounded across centuries.
 
-## Why Nostr
+## Substrate Requirements
 
-Every protocol in the standard publishes its artifacts as Nostr events — signed, relay-replicated, and discoverable without any single party's permission. This is the structural requirement for cumulative craft.
+The standard requires two structural properties from its underlying infrastructure:
 
-Entities, execution records, coordination offers, and notation scores must persist on an open commons if designers and communities are to discover, inherit, and remix each other's work across generations. Nostr provides exactly the properties the standard requires: cryptographic provenance (every event is signed by its creator), relay-based persistence (content survives on any relay that stores it), and permissionless discoverability (anyone can find and build on published work). Where a centralized database introduces a single point of failure and a blockchain introduces consensus overhead, Nostr provides a neutral commons with zero coordination cost.
+1. **Persistent signed broadcast with permissionless replication.** Every artifact — entity definitions, execution components, coordination offers, notation scores — must be signed by its creator, stored redundantly without any single operator's cooperation, and discoverable by anyone without permission. This is the structural requirement for cumulative craft: if artifacts depend on a single host, they die with that host.
 
-Lightning provides near-zero-fee settlement for WOCS coordination — instant finality without tokens, without intermediaries, and without the consensus overhead of on-chain transactions.
+2. **Instant settlement finality in a non-depreciating unit.** Coordination payments must complete atomically — either settled or not, with no intermediate state. Instant finality eliminates credit risk. Without credit risk, there is no need for escrow. Without escrow, there is no need for a trusted intermediary. Settlement in a non-depreciating unit ensures that the patient-capital incentive extends to coordination itself.
+
+These requirements are substrate-independent. Any infrastructure that satisfies them is a valid foundation for the standard.
+
+### Current Implementation: Nostr and Lightning
+
+Nostr provides exactly the first property: cryptographic provenance (every event is signed by its creator), relay-based persistence (content survives on any relay that stores it), and permissionless discoverability (anyone can find and build on published work). Where a centralized database introduces a single point of failure and a blockchain introduces consensus overhead, Nostr provides a neutral commons with zero coordination cost.
+
+Lightning provides the second: near-zero-fee settlement in bitcoin — instant finality without tokens, without intermediaries, and without the consensus overhead of on-chain transactions.
+
+If either substrate were superseded, migration would be mechanical: convert the existing events to the new format and republish. The standard's value lives in its structural abstractions (entity hierarchies, data-flow composition, coordination primitives, interactive grammar), not in the specific event kinds or invoice formats that currently carry them.
 
 ## How It Works in Practice
 
@@ -157,9 +167,28 @@ Attribution and openness reinforce each other. Authors retain provenance and ear
 
 The [Authorial Provenance Standard (APS)](https://github.com/enduring-game-standard/.github/blob/main/profile/APS.md) details this approach — provenance over property, covenants without enforcement, and markets for reputation and verification funded via WOCS.
 
+## Convergence
+
+Permissionless forking is a feature — backyard rules, regional styles, experimental variants. But cumulative craft also requires shared canon: enough agreement that designers can build on each other's work rather than speaking parallel dialects. The standard provides convergence through layered mechanisms rather than central authority:
+
+- **Shared vocabularies** — The [MAPS Library](https://github.com/enduring-game-standard/maps-library) and [RUNS Library](https://github.com/enduring-game-standard/runs-library) establish semantic agreement on fundamental patterns and data shapes. A designer who imports `maps:locked-transition` composes with every other designer who targets the same pattern. A developer who targets `runs:transform` interoperates with every Processor that reads the same field.
+- **Namespacing conventions** — The `std:` prefix in [AEMS Conventions](https://github.com/enduring-game-standard/aems-conventions) marks community-ratified universals. The `runs:` and `maps:` prefixes reserve protocol-level vocabulary. Third-party namespaces coexist freely.
+- **Provenance chains** — Every artifact on Nostr carries its author's signature and references its predecessors. Forks are traceable. Lineage is discoverable. A future scholar can reconstruct which variant descended from which original, the way musicologists trace manuscript lineages.
+- **Institutional memory** — The [Austin School](https://github.com/enduring-game-standard/austin-school) provides the cultural complement: curation, scholarship, and apprenticeship that select for quality the way academies and journals do in other fields.
+- **Economic curation** — [WOCS](https://github.com/enduring-game-standard/wocs-protocol) coordinates funding for library contributions, curation, and audits. Communities can fund the convergence work they value.
+- **RFC processes** — Breaking changes to shared vocabularies require community review (already established in the [RUNS Library](https://github.com/enduring-game-standard/runs-library)).
+
+This mirrors how every durable standard has converged historically. Musical notation converged through conservatories, publisher conventions, and shared pedagogy — not through a standards body that dictated note shapes. Chess notation converged through tournament practice and published analysis — not through a central registry. The standard provides the structural conditions for convergence and trusts the surrounding craft to supply the cultural layer.
+
+## Protocol Stability
+
+The protocol primitives — MAPS's four elements (State, Verb, Arc, Mark), AEMS's four layers (Entity, Manifestation, Asset, State), RUNS's four components (Record, Field, Processor, Network), and WOCS's three events (Offer, Fulfill, Ack) — are designed to be stable across generations. They are minimal enough that evolution is primarily additive: new library patterns, new conventions, new ecosystem packages. The primitives themselves change only when genuinely new concepts emerge — an event expected to be rare, analogous to musical notation adding dynamic markings centuries after establishing the staff.
+
+Evolution happens at the library and convention layers, which version independently. MAPS Patterns carry explicit version numbers. RUNS Library changes follow an RFC process. AEMS Conventions are separate from the core protocol and explicitly invite forking. This separation protects the protocol's role as neutral infrastructure while allowing the surrounding vocabulary to grow freely.
+
 ## Status
 
-These are conceptual specifications — minimal, open, and language-agnostic — inviting experimentation. No reference implementations yet exist. The focus is the hardest problems: preservation, permissionless play, and open ecosystems. Massive synchronous experiences may always involve voluntary centralized layers; the standard ensures they remain optional.
+These are conceptual specifications — minimal, open, and language-agnostic — inviting experimentation. No reference implementations yet exist. The standard describes game structure and composition; execution is the job of runtimes, which may be centralized, distributed, or hybrid at any scale. A high-performance centralized server farm running a RUNS Network is a fully compliant implementation. The standard ensures that centralized layers remain voluntary overlays rather than locked-in dependencies.
 
 This is an invitation to build games that endure — on substrate open enough to outlast the people who built them.
 
