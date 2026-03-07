@@ -83,9 +83,9 @@ Layered Nostr events making game artifacts independent and interpretable across 
 Items persist because they exist on Nostr, not on any single game's servers.
 
 ### RUNS — Record Update Network System
-Data-oriented game execution: everything is Records with Fields, transformed by stateless Processors wired into Networks.
+Composable, plain-text source format for game logic: everything is Records with Fields, transformed by stateless Processors wired into Networks. RUNS source is compiled into platform-specific binaries.
 - Swap renderers, physics, or input without rewriting core logic
-- Mods are native Processor additions, not fragile hooks
+- Variation is native — open the source, swap Processors, compile a variant
 - The Arsenale pattern applied to game engines: independent guilds, shared interfaces, composable output
 
 ### WOCS — Work Order Coordination Settlement
@@ -95,8 +95,8 @@ Minimal coordination primitive: three Nostr events (Offer, Fulfill, Ack) with Li
 
 ### MAPS — Notation for Interactive Grammar
 Four primitives (State, Verb, Arc, Mark) describing game mechanics as readable, composable scores.
-- States become RUNS Records, Verbs become Processors, Arcs become Networks
-- A designer sketching a combat system in notation writes the skeleton the execution layer reads
+- States are implemented as RUNS Records, Verbs as Processors, Arcs as Network wiring
+- A designer writing a combat system in MAPS notation writes the blueprint from which RUNS source is built
 - The cumulative craft pillar: what musical notation did for composition, MAPS does for interactive design
 
 All are MIT-licensed, deliberately minimal, and language-agnostic.
@@ -150,6 +150,8 @@ When evaluating ideas, proposals, or critiques within this paradigm, the relevan
 
 **Scalability** is the runtime's job, not the protocol's job. A high-performance centralized server farm running a RUNS Network is a fully compliant implementation. Nostr is the persistence and discovery layer, not the execution hot path.
 
+The gameplay tick loop has no per-frame dependency on Nostr. RUNS source is compiled into self-contained binaries. Nostr interaction occurs at lifecycle boundaries: discovery, build-time dependency resolution, and load/save of AEMS Asset and State events.
+
 **Convergence with existing platforms** is neither a goal nor a validation criterion. The protocols are neutral substrate. Existing platforms may build on them, compete with them, or ignore them.
 
 ---
@@ -168,6 +170,8 @@ These are the default-training-prior errors that most frequently distort AI reas
 
 **"This needs governance / a standards body / a foundation."** Musical notation converged through conservatories, publisher conventions, and shared pedagogy — not through a standards body. Chess notation converged through tournament practice and published analysis — not through a central registry. EGS provides structural conditions for convergence and trusts the surrounding craft to supply the cultural layer.
 
+**"RUNS is a game engine / runtime."** RUNS is source code — plain-text, composable, and enduring. Runtimes compile RUNS source into platform-specific binaries. Variation in RUNS is not "modding" — it is the natural composability that physical games have always had. You do not "mod" soccer to play with house rules; you just play. Similarly, Nostr is the package commons (like npm or apt), not a runtime dependency. The gameplay tick loop has no per-frame Nostr interaction, just as a compiled C program has no runtime dependency on GitHub.
+
 ---
 
 ## 9. Protocol Vocabulary Reference
@@ -175,7 +179,7 @@ These are the default-training-prior errors that most frequently distort AI reas
 | Acronym | Full Name | Purpose |
 |---------|-----------|---------|
 | **AEMS** | Asset-Entity-Manifestation-State | Durable Nostr game artifacts |
-| **RUNS** | Record Update Network System | Composable, data-oriented execution |
+| **RUNS** | Record Update Network System | Composable, plain-text source for game logic |
 | **WOCS** | Work Order Coordination Settlement | Permissionless coordination + Lightning settlement |
 | **MAPS** | State, Verb, Arc, Mark | Notation for interactive grammar |
 | **APS** | Authorial Provenance Standard | Provenance over property, covenants without enforcement |

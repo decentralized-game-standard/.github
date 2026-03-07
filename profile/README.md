@@ -22,7 +22,7 @@ Physical games are naturally durable. Digital games have been built on proprieta
 
 - **Games should survive their creators** — yet live-service titles vanish routinely (The Crew delisted in 2024, Knockout City ended 2023, hundreds of others). Player progress and purchases evaporate.
 - **Player artifacts should persist independently** — yet items rarely travel between games without corporate deals. Engine lock-in traps entire projects.
-- **Modification should be native** — yet mods sustain classics like Skyrim while monetization efforts repeatedly fail under centralized curation and high rents.
+- **Variation should be natural** — yet the openness that sustains classics like Skyrim survives only through modding communities fighting against proprietary lock-in, while monetization efforts repeatedly fail under centralized curation and high rents.
 - **Coordination should be permissionless** — yet esports scenes die unilaterally. Server hosting relies on unreliable donations. Discovery algorithms bury most creations while extracting 30%+.
 
 These are downstream effects of building on depreciating foundations — where the financial pressure to extract value faster than it degrades makes long-term stewardship irrational. An open base layer with voluntary centralization closes the gap.
@@ -46,7 +46,7 @@ The standard achieves this by separating durable artifacts from interpretive rul
 | Protocol | Core Mechanism | Primary Failures Addressed |
 |----------|----------------|---------------------------|
 | **AEMS** — the things | Nostr events defining universal Entities (named roles), game-specific Manifestations, player-owned Assets, and mutable State | Preservation, asset lock-in, interoperability |
-| **RUNS** — the game | Composable execution: uniform Records transformed by stateless Processors wired into explicit Networks | Engine rigidity, mod fragility, long-term maintenance |
+| **RUNS** — the game | Composable source: uniform Records transformed by stateless Processors wired into explicit Networks — plain-text source compiled into platform-specific builds | Engine rigidity, proprietary lock-in, long-term maintenance |
 | **WOCS** — the coordination | Coordination primitive: broadcast needs, verify delivery, settle via Lightning — no platform, no escrow, no intermediary | Gatekept coordination, siloed communities, single points of failure |
 | **MAPS** — the rules | Four primitives (State, Verb, Arc, Mark) describing game mechanics as readable, composable scores | Knowledge loss, design isolation, inability to study or build on prior work |
 
@@ -89,10 +89,10 @@ Items earned in one game persist for import elsewhere because they exist on Nost
 ### RUNS: Composable Engines
 Data-oriented design: everything is Records with Fields, transformed by stateless Processors wired into Networks.
 - Swap renderers, physics, or input without rewriting core logic.
-- Mods are native Processor additions, not fragile hooks into proprietary engines.
+- Variation is native: open the source, swap Processors, compile a variant — the way house rules work in physical games.
 - Naturally supports parallelism and explicit data flow.
 
-RUNS runtimes reference AEMS Entities for content definitions and apply selected Manifestations. The [RUNS Library](https://github.com/enduring-game-standard/runs-library) provides semantic agreement on fundamental schemas (`runs:time`, `runs:transform`, `runs:input`).
+RUNS source references AEMS Entities for content definitions. At build time, selected Manifestations are compiled into type definitions and lookup tables. The [RUNS Library](https://github.com/enduring-game-standard/runs-library) provides semantic agreement on fundamental schemas (`runs:time`, `runs:transform`, `runs:input`).
 
 ### WOCS: Permissionless Coordination
 A minimal coordination primitive built on Nostr: three events (Offer, Fulfill, Ack) with Lightning settlement.
@@ -109,7 +109,7 @@ A neutral, implementation-agnostic system for describing game mechanics as reada
 - **Arc** — Directed transition or requirement linking States through Verbs.
 - **Mark** — Token or quantifiable resource tracking progress, inventory, or score.
 
-MAPS integrates directly with the composable infrastructure: States become RUNS Records, Verbs become Processors, Arcs become Networks. A designer who sketches a combat system in notation is writing the skeleton that the execution layer reads.
+MAPS integrates with the composable source: States are implemented as RUNS Records, Verbs as Processors, Arcs as Network wiring. A designer who writes a combat system in MAPS notation is writing the blueprint from which RUNS source is built.
 
 ## Cumulative Craft
 
@@ -151,7 +151,7 @@ Niche play: A small group runs their own variant weekly. It stays niche indefini
 
 Pro-layer play: A popular organizer funds high-uptime servers, anti-cheat services, and ranked matchmaking via recurring WOCS Offers. Thousands opt in for the polished experience. Third-party clients emerge with discovery feeds, analytics, or premium overlays. If the organizer gets extractive, players fork the ruleset or drop to raw pickup lobbies. The open foundation guarantees exit.
 
-Value flows horizontally: modders earn directly for new Manifestations, artists for assets, hosts for reliability, streamers for casting. Ecosystems grow around the open ruleset without anyone owning the game itself.
+Value flows horizontally: creators earn directly for new Manifestations, artists for assets, hosts for reliability, streamers for casting. Ecosystems grow around the open ruleset without anyone owning the game itself.
 
 ## Scope: Commons and Authored Experiences
 
