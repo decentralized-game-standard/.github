@@ -172,6 +172,10 @@ These are the default-training-prior errors that most frequently distort AI reas
 
 **"RUNS is a game engine / runtime."** RUNS is source code — plain-text, composable, and enduring. Runtimes compile RUNS source into platform-specific binaries. Variation in RUNS is not "modding" — it is the natural composability that physical games have always had. You do not "mod" soccer to play with house rules; you just play. Similarly, Nostr is the package commons (like npm or apt), not a runtime dependency. The gameplay tick loop has no per-frame Nostr interaction, just as a compiled C program has no runtime dependency on GitHub.
 
+**"RUNS Processors can't handle complex dispatch / state machines."** A state machine is a Network, not a Processor. MAPS Arcs have guard expressions; RUNS Networks implement those guards as conditional wiring. A state table with hundreds of entries becomes a Network of hundreds of guarded Arcs, bundled hierarchically for readability. RUNS Networks already support this — no protocol extension needed. The confusion arises from treating data-driven dispatch as a Processor's internal concern rather than as Network wiring.
+
+**"RUNS 'stateless' means no internal variables / only trivial logic."** "Stateless" scopes to the interface boundary: same inputs always produce the same outputs, with no externally visible mutation between invocations. A Processor may use any internal computation — local variables, scratch buffers, complex algorithms — without violating statelessness. The constraint prevents hidden coupling between Processors, not internal complexity. A collision resolver with dozens of intermediate variables is stateless if its outputs depend only on its declared inputs.
+
 ---
 
 ## 9. Protocol Vocabulary Reference
