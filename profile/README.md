@@ -45,10 +45,10 @@ The standard achieves this by separating durable artifacts from interpretive rul
 
 | Protocol | Core Mechanism | Primary Failures Addressed |
 |----------|----------------|---------------------------|
-| **AEMS** (Asset-Entity-Manifestation-State) | Nostr events defining universal Entities, game-specific Manifestations, player-owned Assets, and mutable State | Preservation, asset lock-in, interoperability |
-| **RUNS** (Record Update Network System) | Execution substrate: uniform Records transformed by stateless Processors wired into explicit Networks | Engine rigidity, mod fragility, long-term maintenance |
-| **WOCS** (Work Order Coordination Settlement) | Coordination primitive: broadcast needs, verify delivery, settle via Lightning — no platform, no escrow, no reputation | Gatekept coordination, siloed communities, single points of failure |
-| **MAPS** (Notation for interactive grammar) | Four primitives (State, Verb, Arc, Mark) describing game mechanics as readable, composable scores | Knowledge loss, design isolation, inability to study or build on prior work |
+| **AEMS** — the things | Nostr events defining universal Entities (named roles), game-specific Manifestations, player-owned Assets, and mutable State | Preservation, asset lock-in, interoperability |
+| **RUNS** — the game | Composable execution: uniform Records transformed by stateless Processors wired into explicit Networks | Engine rigidity, mod fragility, long-term maintenance |
+| **WOCS** — the coordination | Coordination primitive: broadcast needs, verify delivery, settle via Lightning — no platform, no escrow, no intermediary | Gatekept coordination, siloed communities, single points of failure |
+| **MAPS** — the rules | Four primitives (State, Verb, Arc, Mark) describing game mechanics as readable, composable scores | Knowledge loss, design isolation, inability to study or build on prior work |
 
 ## The Discipline of Protocol Restraint
 
@@ -77,14 +77,14 @@ This restraint is not laziness or incompleteness. It is the design philosophy th
 
 ## The Protocols
 
-### AEMS: Durable Entities
+### AEMS: The Things
 Layered Nostr events make game artifacts independent and interpretable across any game that reads them.
-- **Entity** — Universal archetype (e.g., "sword that deals damage"), discoverable on the open commons.
-- **Manifestation** — Game-specific implementation (e.g., +50 attack, fire enchantment).
+- **Entity** — Named role: an IP-agnostic concept (e.g., "sword"), discoverable on the open commons.
+- **Manifestation** — Game-specific implementation (e.g., +50 attack, fire enchantment). References one or more Entities.
 - **Asset** — Player's unique instance of a Manifestation.
 - **State** — Mutable stats of that specific Asset (durability, upgrades).
 
-Items earned in one game persist for import elsewhere because they exist on Nostr, not on any single game's servers.
+Items earned in one game persist for import elsewhere because they exist on Nostr, not on any single game's servers. Any game can read an Entity reference and decide what to do with it.
 
 ### RUNS: Composable Engines
 Data-oriented design: everything is Records with Fields, transformed by stateless Processors wired into Networks.
@@ -102,12 +102,12 @@ A minimal coordination primitive built on Nostr: three events (Offer, Fulfill, A
 
 Open signals enabling strangers to coordinate server hosting, anti-cheat services, asset creation, tournament pooling, and any other ecosystem service — directly, with instant settlement.
 
-### MAPS: Notation for Interactive Grammar
+### MAPS: The Rules
 A neutral, implementation-agnostic system for describing game mechanics as readable, composable scores.
-- **State** — Named variables that change during play.
-- **Verb** — Transformations: things that happen to States.
-- **Arc** — Conditional transitions linking States through Verbs.
-- **Mark** — Annotations connecting mechanical structures to design intent.
+- **State** — Observable condition or situation.
+- **Verb** — Available action or affordance.
+- **Arc** — Directed transition or requirement linking States through Verbs.
+- **Mark** — Token or quantifiable resource tracking progress, inventory, or score.
 
 MAPS integrates directly with the composable infrastructure: States become RUNS Records, Verbs become Processors, Arcs become Networks. A designer who sketches a combat system in notation is writing the skeleton that the execution layer reads.
 
@@ -145,7 +145,7 @@ Imagine "MOBA" as a genre like basketball:
 - Different groups publish Manifestations: "classic Dota-style," "fast-paced beginner variant," "underwater twist." Each references the same Entities but interprets them differently.
 - Players own Assets — instances with history and state that persist on Nostr.
 
-Casual play: Someone posts a WOCS Offer — "500 sats for a quick MOBA lobby tonight, classic rules." Others accept via any RUNS-compatible client. A community-hosted server runs the match. Items import automatically. Accounts and platforms are optional.
+Casual play: Someone posts a WOCS Offer — "500 sats for a quick MOBA lobby tonight, classic rules." Others accept via any RUNS-compatible client. A community-hosted server runs the match. Items are recognized via Entity references — the receiving game decides what to do with them. Accounts and platforms are optional.
 
 Niche play: A small group runs their own variant weekly. It stays niche indefinitely — a standing game among friends, sustained without scale.
 
