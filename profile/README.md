@@ -46,7 +46,7 @@ The standard achieves this by separating durable artifacts from interpretive rul
 | Protocol | Core Mechanism | Primary Failures Addressed |
 |----------|----------------|---------------------------|
 | **AEMS** — the things | Nostr events defining universal Entities (named roles), game-specific Manifestations, player-owned Assets, and mutable State | Preservation, asset lock-in, interoperability |
-| **RUNS** — the game | Composable source: uniform Records transformed by stateless Processors wired into explicit Networks — plain-text source compiled into platform-specific builds | Engine rigidity, proprietary lock-in, long-term maintenance |
+| **RUNS** — the game | Composable source: uniform Records transformed by stateless Processors wired into explicit Networks — plain-text source compiled into platform-specific builds. Game logic in formal Processor source (Tier 1), compiled by platform-specific runtimes (Tier 2), with non-interactable subsystems (rendering, decorative simulation) as runtime concerns (Tier 3) | Engine rigidity, proprietary lock-in, long-term maintenance |
 | **WOCS** — the coordination | Coordination primitive: broadcast needs, verify delivery, settle via Lightning — no platform, no escrow, no intermediary | Gatekept coordination, siloed communities, single points of failure |
 | **MAPS** — the rules | Four primitives (State, Verb, Arc, Mark) describing game mechanics as readable, composable scores | Knowledge loss, design isolation, inability to study or build on prior work |
 
@@ -88,7 +88,7 @@ Items earned in one game persist for import elsewhere because they exist on Nost
 
 ### RUNS: Composable Engines
 Data-oriented design: everything is Records with Fields, transformed by stateless Processors wired into Networks.
-- Swap renderers, physics, or input without rewriting core logic.
+- Swap renderers, non-interactable simulation, or input hardware without rewriting game rules. Gameplay-determining simulation (movement, collision, projectile trajectories) is game logic — it lives in Processors.
 - Variation is native: open the source, swap Processors, compile a variant — the way house rules work in physical games.
 - Naturally supports parallelism and explicit data flow.
 
