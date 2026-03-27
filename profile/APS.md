@@ -32,7 +32,7 @@ APS preserves the moral claims that matter — attribution, reciprocity, honesty
 
 Consider a sealed letter. Anyone *can* open it before the intended time. But the seal *signals* "this was meant to be opened by X, at Y moment." Breaking the seal is socially understood to diminish the experience. The letter still exists if opened early — it is not destroyed.
 
-Mesopotamian cylinder seals worked this way from 3500 BCE: rolled across wet clay to authenticate documents and signal authorial intent. They did not prevent opening. They provided tamper evidence. A broken seal indicated violation. The social cost was understood without legal mandate — for five thousand years before the first copyright statute.
+Mesopotamian cylinder seals worked this way from 3500 BC: rolled across wet clay to authenticate documents and signal authorial intent. They did not prevent opening. They provided tamper evidence. A broken seal indicated violation. The social cost was understood without legal mandate — for five thousand years before the first copyright statute.
 
 Now consider two scenarios with a creative work:
 
