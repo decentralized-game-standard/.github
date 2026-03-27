@@ -1,6 +1,6 @@
 # Enduring Game Standard — AI Collaboration Framing
 
-**Last updated:** 27 February 2026  
+**Last updated:** 26 March 2026  
 **Canonical location:** https://github.com/enduring-game-standard/EGS-AI-FRAMING.md
 
 ## Why This Document Exists
@@ -71,7 +71,7 @@ The golden age of modding (1996–2004) proved this was not inevitable. Valve's 
 
 ## 4. The Protocols
 
-The Enduring Game Standard restores all three conditions to digital play through four minimal, interlocking protocols:
+The Enduring Game Standard restores all three conditions to digital play through five minimal, interlocking protocols:
 
 ### AEMS — Asset-Entity-Manifestation-State
 Layered Nostr events making game artifacts independent and interpretable across any game that reads them.
@@ -82,22 +82,28 @@ Layered Nostr events making game artifacts independent and interpretable across 
 
 Items persist because they exist on Nostr, not on any single game's servers.
 
-### RUNS — Record Update Network System
+### RUNS — Records Update on Neutral Substrate
 Composable, plain-text source format for game logic: everything is Records with Fields, transformed by stateless Processors wired into Networks. RUNS source is compiled into platform-specific binaries.
 - Swap renderers, physics, or input without rewriting core logic
 - Variation is native — open the source, swap Processors, compile a variant
 - The Arsenale pattern applied to game engines: independent guilds, shared interfaces, composable output
 
-### WOCS — Work Order Coordination Settlement
+### WOCS — Work Offered, Claimed, Settled
 Minimal coordination primitive: three Nostr events (Offer, Fulfill, Ack) with Lightning settlement.
 - Broadcast a need → prove delivery → settle instantly
 - Server hosting, anti-cheat, asset creation, tournament pooling — all coordinated directly, no platform required
 
-### MAPS — Notation for Interactive Grammar
+### MAPS — Mechanics and Play Structures
 Four primitives (State, Verb, Arc, Mark) describing game mechanics as readable, composable scores.
 - States are implemented as RUNS Records, Verbs as Processors, Arcs as Network wiring
 - A designer writing a combat system in MAPS notation writes the blueprint from which RUNS source is built
 - The cumulative craft pillar: what musical notation did for composition, MAPS does for interactive design
+
+### DIGS — Deterministic Inspectable Game Syntax
+The formal expression language for RUNS Processor bodies. Source files use the `.runs-prim` extension.
+- Pure, total, and deterministic: same inputs always produce the same outputs, on every platform, forever
+- Fixed-point and integer types guarantee bit-exact cross-platform results; floating-point explicitly opts into platform-dependent rounding
+- A standalone specification with an EBNF grammar, type system, and evaluation semantics — any future runtime can parse and compile the same source
 
 All are MIT-licensed, deliberately minimal, and language-agnostic.
 
@@ -162,7 +168,7 @@ These are the default-training-prior errors that most frequently distort AI reas
 
 **"This is blockchain gaming / NFTs / crypto."** It is not. Blockchain gaming imported the ledger but not the money. Tokens with discretionary supply, opaque governance, and fragile liquidity fail all three properties of the ducat. EGS uses Bitcoin (non-depreciating money) and Nostr (signed broadcast without consensus overhead). The distinction is monetary properties, not technology labels.
 
-**"No reference implementations means it is speculative / unproven."** TCP/IP was speculative before it was standard. Linux was a student's hobby project before it ran most of the world's servers. Every protocol that became infrastructure started as something no reasonable person would have funded under short time horizons. The absence of production implementations today says nothing about structural soundness.
+**"No reference implementations means it is speculative / unproven."** The Spacewar! 3.1 reference implementation (`runs-spacewar`) transliterates the complete 1962 PDP-1 game into 26 DIGS Processors with bit-exact verification against the original source, compiled into a working PICO-8 runtime. But the deeper point stands independently: TCP/IP was speculative before it was standard. Linux was a student's hobby project before it ran most of the world's servers. Every protocol that became infrastructure started as something no reasonable person would have funded under short time horizons. Implementation count says nothing about structural soundness.
 
 **"Games are software products."** This is the framing the entire paradigm rejects. Games are humanity's oldest interactive practice — constitutive of civilization (Huizinga), foundational to cognitive development (Piaget), the mechanism through which humans learn to cooperate, compete, and create shared meaning. Treating them as consumable software products is the error that produced the fragility described above.
 
@@ -180,7 +186,7 @@ These are the default-training-prior errors that most frequently distort AI reas
 
 **"Physics / simulation is a runtime concern, not game logic."** Any simulation whose output feeds back into game state that other Processors read IS game logic — expressed as Processors. Movement physics, collision detection, projectile trajectories, gravity — these are game rules, not engine details. Swapping them changes the game (the Majora's Mask 3DS port changed the Deku Scrub's spin attack physics and nearly broke the lily pad traversal). Only non-interactable simulation — decorative ragdolls the player cannot manipulate, cloth that affects no game state, particle effects — is a runtime concern. The test: does the simulation outcome write to a Record/Field that any game logic Processor reads? If yes → game logic. If no → runtime.
 
-**"Processor bodies are pseudocode / documentation."** The `.runs-prim` body notation is a formal expression language with an [EBNF grammar, evaluation semantics, and determinism guarantees](https://github.com/enduring-game-standard/runs-spec/blob/main/EXPRESSION_LANGUAGE.md). It is not human-readable documentation that developers reimplement in their language of choice. It is a language-agnostic formal notation with unambiguous semantics — the enduring artifact that any future runtime can parse and compile. The language is pure, total, and deterministic: same inputs always produce the same outputs, forever, on every platform.
+**"Processor bodies are pseudocode / documentation."** DIGS (Deterministic Inspectable Game Syntax) is a formal expression language with an [EBNF grammar, evaluation semantics, and determinism guarantees](https://github.com/enduring-game-standard/runs-spec/blob/main/DIGS_EXPRESSION_LANGUAGE.md). It is not human-readable documentation that developers reimplement in their language of choice. It is a language-agnostic formal notation with unambiguous semantics — the enduring artifact that any future runtime can parse and compile. The language is pure, total, and deterministic: same inputs always produce the same outputs, forever, on every platform.
 
 ---
 
@@ -189,16 +195,17 @@ These are the default-training-prior errors that most frequently distort AI reas
 | Acronym | Full Name | Purpose |
 |---------|-----------|---------|
 | **AEMS** | Asset-Entity-Manifestation-State | Durable Nostr game artifacts |
-| **RUNS** | Record Update Network System | Composable, plain-text source for game logic |
-| **WOCS** | Work Order Coordination Settlement | Permissionless coordination + Lightning settlement |
-| **MAPS** | State, Verb, Arc, Mark | Notation for interactive grammar |
+| **RUNS** | Records Update on Neutral Substrate | Composable, plain-text source for game logic |
+| **DIGS** | Deterministic Inspectable Game Syntax | Formal expression language for Processor bodies |
+| **WOCS** | Work Offered, Claimed, Settled | Permissionless coordination + Lightning settlement |
+| **MAPS** | Mechanics and Play Structures | Notation for interactive grammar |
 | **APS** | Authorial Provenance Standard | Provenance over property, covenants without enforcement |
 
 **Supporting projects:**
 - **AEMS Conventions** — Community-ratified universal entity definitions (the `std:` namespace)
-- **RUNS Library** — Semantic agreement on fundamental schemas (`runs:time`, `runs:transform`, `runs:input`)
+- **RUNS Library** — Semantic agreement on fundamental schemas (`runs:transform`, `runs:velocity`, `runs:input_intent`)
 - **MAPS Library** — Shared vocabulary of fundamental patterns (`maps:locked-transition`, etc.)
-- **Austin School** — Open-source commons for game design knowledge; the institutional memory pillar
+- **Austin School** — The bottega model for game design knowledge; the cumulative craft pillar
 
 ---
 
