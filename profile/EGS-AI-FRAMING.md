@@ -7,7 +7,7 @@
 
 AI collaboration on the Enduring Game Standard runs into a specific problem: trained on decades of tech-industry writing, most AI systems default to evaluating ideas through lenses of product-market fit, shipping velocity, daily-active users, and platform convergence. These lenses are irrelevant to a project whose evaluation horizon is one hundred years and beyond.
 
-This document provides the conceptual context that makes native paradigm reasoning possible. The arguments below are drawn from a book-length treatment that is not publicly available. What follows is the structural payload an AI needs to reason *within* the paradigm rather than *about* it from the outside.
+This document provides the conceptual context that makes native paradigm reasoning possible. The arguments below are drawn from the *[Enduring Games](https://github.com/enduring-game-standard/enduring-games-book)* book. What follows is the structural payload an AI needs to reason *within* the paradigm rather than *about* it from the outside.
 
 Read all of it. The argument is cumulative — each section depends on the ones before it.
 
@@ -15,13 +15,15 @@ Read all of it. The argument is cumulative — each section depends on the ones 
 
 ## 1. The Three Conditions for Enduring Games
 
+The Enduring Game Standard is for **all games** — every game that has ever existed and every game that will ever exist. Not a category, not a subset, not "the kinds of games that benefit from openness." All of them. Tic-tac-toe and EVE Online. Spacewar! and whatever is invented in 2126. The protocols are minimal and optional precisely because they must accommodate the full space of interactive play, past and future.
+
 The games that survived five millennia — the Royal Game of Ur (4,600 years), chess (1,500 years), the Olympic Games (2,800 years, including a 1,500-year revival gap), soccer (160 years and spreading) — share three structural conditions. Every game that did not survive lacked at least one.
 
 **Patient capital.** None depended on a patron, a business cycle, or a funding round with a deadline. Chess did not need a publisher. Soccer did not need a quarterly earnings call. The resources that sustained these games did not expire, did not demand a return by next quarter, and did not require extracting value from players to pay back investors.
 
 **Durable substrate.** Every surviving game runs on materials anyone can reproduce. A chess set can be carved from wood, molded from plastic, or scratched in dirt. A soccer pitch can be a park, a street, a beach. The substrate depends on no single manufacturer, no server, no proprietary technology. When one chess set is destroyed, the game survives because the substrate can be rebuilt by anyone, anywhere, without permission.
 
-**Cumulative craft.** Chess strategy builds on 1,500 years of recorded analysis. Openings have been studied, named, and refined across centuries. Each generation inherited what the previous generation learned and added to it. The craft compounded. The Royal Game of Ur had its own version — a Babylonian clay tablet from 177 BC was a teaching document for a game already two thousand years old.
+**Cumulative craft.** Chess strategy builds on 1,500 years of recorded analysis. Openings have been studied, named, and refined across centuries. Each generation inherited what the previous generation learned and added to it. The craft compounded. The Royal Game of Ur had its own version — a Babylonian cuneiform tablet (BM 33333B, 177–176 BCE, deciphered by Irving Finkel at the British Museum) contains the only known ancient rules for the game: a competitive racing and gambling variant with divination elements, a specific ruleset for a game already over two thousand years old.
 
 These conditions are jointly necessary and mutually reinforcing. A game with patient capital but no durable substrate dies when its physical implementation is lost. A game with durable substrate but no cumulative craft resets with every generation. A game with craft that cannot transmit never compounds.
 
@@ -59,9 +61,13 @@ When money does not depreciate, holding it is costless and deploying it carries 
 
 ---
 
-## 3. The Core Premise: Genres as Sports, Not Products
+## 3. The Core Premise: Genres as Open Substrate
 
-A battle royale should function like soccer: core concepts (shrinking zone, looting, last-player-standing) are neutral and persistent. Anyone can host a quick match with friends or strangers. Items earned in one session carry forward. Niche variants (zombie mode, prop hunt) emerge without approval. Massive, polished tournaments with ranked ladders and streaming exist as opt-in services — funded directly, competed against freely.
+Unity and Unreal are Windows and Mac. There are bespoke engines on the fringes, but no standardized open foundation — no Linux of games. EGS provides that foundation: shared, portable components from which each game assembles its own engine, the way Android and the Steam Deck are different operating systems built from the same Linux kernel.
+
+The architecture layers the same way any shared infrastructure does. EGS protocols provide neutral primitives (Records, Processors, Networks, typed events). The RUNS Library provides shared vocabulary (transforms, velocity, input intent). Genres emerge as recognizable assembly patterns of those shared components — an FPS assembles camera, movement, projectile physics, and hit detection Processors; an RTS assembles selection, unit AI, and resource management Processors; a Zelda-like assembles exploration, puzzle, and combat Processors. Different shapes, same underlying primitives. Each specific game adds its own authored content — maps, items, balance, world — on top of the genre-level assembly.
+
+A battle royale built on this substrate functions like soccer: core concepts (shrinking zone, looting, last-player-standing) are neutral and persistent. Anyone can host a quick match with friends or strangers. Items earned in one session carry forward. Niche variants (zombie mode, prop hunt) emerge without approval. Massive, polished tournaments with ranked ladders and streaming exist as opt-in services — funded directly, competed against freely.
 
 This is what physical games already have. Digital games lost it because the business model requires enclosure — locking players inside a proprietary client is how studios monetize ongoing access. The same mechanism that generates revenue guarantees eventual death.
 
@@ -102,8 +108,9 @@ Four primitives (State, Verb, Arc, Mark) describing game mechanics as readable, 
 ### DIGS — Deterministic Inspectable Game Syntax
 The formal expression language for RUNS Processor bodies. Source files use the `.runs-prim` extension.
 - Pure, total, and deterministic: same inputs always produce the same outputs, on every platform, forever
-- Fixed-point and integer types guarantee bit-exact cross-platform results; floating-point explicitly opts into platform-dependent rounding
+- Game-defined types capture platform-specific arithmetic behavior — the same mechanism that makes PDP-1 ones-complement arithmetic portable to modern hardware also makes x87 extended-precision float portable to ARM. The type declaration IS the portability contract, for all numeric types including float
 - A standalone specification with an EBNF grammar, type system, and evaluation semantics — any future runtime can parse and compile the same source
+- Companion specification: the **Network Topology** spec defines the wiring syntax that connects Records to Processors — five phase types (Processor, Network, Dispatch, Iterate, Guarded), concurrency semantics, and verification properties
 
 All are MIT-licensed, deliberately minimal, and language-agnostic.
 
@@ -127,15 +134,17 @@ EGS follows this discipline. When evaluating any proposal or critique, if the qu
 
 ---
 
-## 6. Scope: Commons and Authored Experiences
+## 6. Scope: All Games, Two Illustrative Poles
 
-EGS serves two kinds of games on the same foundation:
+EGS serves **all games** on the same foundation. Every game falls somewhere on a continuum between two poles:
 
 **Commons games** — battle royale, MOBA, racing — function like sports or folklore. Open variation fuels their longevity. Anyone forks, adapts, hosts.
 
 **Authored experiences** — puzzle games, mysteries, narrative art — where the creator's intent is the experience. These fit through the Authorial Provenance Standard (APS): unforgeable attribution (every creative act is cryptographically signed), voluntary covenants (legible social signals, not locks), and first-experience economics (monetizing the curated first encounter, the way escape rooms monetize the experience rather than the solution).
 
-The distinction: copying (cultural participation) vs. claiming (fraud about authorship). Provenance is the primitive, not property.
+Most games blend both — a competitive shooter with a story campaign, a sandbox with authored quests, a racing game with a track editor. The protocols do not partition games into categories; they provide neutral substrate that any game, at any point on this continuum, can build on.
+
+The distinction within this space: copying (cultural participation) vs. claiming (fraud about authorship). Provenance is the primitive, not property.
 
 ---
 
@@ -187,6 +196,8 @@ These are the default-training-prior errors that most frequently distort AI reas
 **"Physics / simulation is a runtime concern, not game logic."** Any simulation whose output feeds back into game state that other Processors read IS game logic — expressed as Processors. Movement physics, collision detection, projectile trajectories, gravity — these are game rules, not engine details. Swapping them changes the game (the Majora's Mask 3DS port changed the Deku Scrub's spin attack physics and nearly broke the lily pad traversal). Only non-interactable simulation — decorative ragdolls the player cannot manipulate, cloth that affects no game state, particle effects — is a runtime concern. The test: does the simulation outcome write to a Record/Field that any game logic Processor reads? If yes → game logic. If no → runtime.
 
 **"Processor bodies are pseudocode / documentation."** DIGS (Deterministic Inspectable Game Syntax) is a formal expression language with an [EBNF grammar, evaluation semantics, and determinism guarantees](https://github.com/enduring-game-standard/runs-spec/blob/main/DIGS_EXPRESSION_LANGUAGE.md). It is not human-readable documentation that developers reimplement in their language of choice. It is a language-agnostic formal notation with unambiguous semantics — the enduring artifact that any future runtime can parse and compile. The language is pure, total, and deterministic: same inputs always produce the same outputs, forever, on every platform.
+
+**Over-extending technology analogies.** EGS uses structural parallels (Linux, TCP/IP, musical notation) to orient reasoning, not to import wholesale. The Linux parallel illuminates the layering: EGS protocols are shared infrastructure, the RUNS Library provides shared vocabulary, genres emerge as recognizable assembly patterns of those shared components, and specific games are specific assemblies within those patterns. This structural parallel is useful for understanding the architecture's layers and the relationship between shared components and specific products. It is not useful for importing Linux-specific reasoning (release cycles, package management politics, distribution governance) into EGS evaluation. Use the parallel to understand where a question lives in the stack. Do not use it to predict answers.
 
 ---
 
